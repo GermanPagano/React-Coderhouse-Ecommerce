@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Coderhouse-Ecommerce/static/css/main.08eecfe9.css",
+    "main.js": "/React-Coderhouse-Ecommerce/static/js/main.f496ad00.js",
+    "static/media/sports.png": "/React-Coderhouse-Ecommerce/static/media/sports.c957d708c2e16033ff10.png",
+    "static/media/brand.png": "/React-Coderhouse-Ecommerce/static/media/brand.e7ca8b87d98485ff34e9.png",
+    "index.html": "/React-Coderhouse-Ecommerce/index.html",
+    "main.08eecfe9.css.map": "/React-Coderhouse-Ecommerce/static/css/main.08eecfe9.css.map",
+    "main.f496ad00.js.map": "/React-Coderhouse-Ecommerce/static/js/main.f496ad00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08eecfe9.css",
+    "static/js/main.f496ad00.js"
+  ]
+}
