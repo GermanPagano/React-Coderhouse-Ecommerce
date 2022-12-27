@@ -1,15 +1,21 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
-import './SearchItem.css'
+import "./SearchItem.css";
+import { MDBInputGroup, MDBBtn } from "mdb-react-ui-kit";
+import { FiSearch } from "react-icons/fi";
 
 const SearchItem = () => {
   return (
-    <div className="container mt-4 searcItem">
-      <Form.Control
-        className=" text-center  InputSearchItem"
-        placeholder="Sere la barra de busqueda"
-        
-      />
+    <div className="container d-flex  justify-content-center ">
+      <MDBInputGroup className=" searcItem col-10" >
+        <input
+          className="form-control "
+          placeholder="Search"
+          type="text"
+        />
+        <MDBBtn outline>
+          <FiSearch />
+        </MDBBtn>
+      </MDBInputGroup>
     </div>
   );
 };

@@ -1,24 +1,50 @@
-import React from "react";
-import Card from "./Card";
-import sports from "../../assets/img/sections-cards/sports.png";
- 
+import { useEffect , useState }from "react";
+import Item from "./Item";
+import "./ItemlistStyles.css";
+import { MDBContainer, MDBRow } from "mdb-react-ui-kit";
+import CatchProductsOfMock from '../../services/mockService';
 
 
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
+  // estado para guardar los productos
+  const [products, setProduct] = useState([]);
+  // este mensaje me avisa cuando estamos intentando mostrar en la pantalla los productos
+  console.log("%c Intentando renderizar ", "background-color: blue");
+  // useEffect para ejecutar la funcion que ira a buscar los productos al mockService
+  useEffect(() => {
+    //llamo a a funcion 
+      CatchProductsOfMock()
+      // de ser exitosa la devolucion guardo lo recibido en el useState
+      .then( response => setProduct(response))
+      // de ser erronea la respuesta mostrar el error por consola
+      .catch((e) => console.log(e));
+    }, []);
+
+
+
   return (
-    <div className="container mt-4">
-      {props.greeting}
-      <div className="row mt-2 g-4">
-        <Card text={"Sports"} img={sports} />
+    <MDBContainer fluid className=" container my-5 text-center ">
+      <h5 className="mt-4 mb-5">
+        <strong>All games</strong>
+      </h5>
+      <MDBRow>
 
-        <Card text={"Sports"} img={sports} />
+        {products.map( element => {
+        return (
+          <Item
+          key={element.id}
+          imgUrl={element.imgUrl}
+          text={element.text}
+          title={element.title}
+          category={element.category}
+          price={element.price}
+        ></Item>
 
-        <Card text={"Sports"} img={sports} />
-
-        <Card text={"Sports"} img={sports} />
-      </div>
-    </div>
+        )}
+      )}
+      </MDBRow>
+    </MDBContainer>
   );
 };
 

@@ -1,27 +1,18 @@
-import React from 'react';
-import { BsCartFill } from "react-icons/bs";
-
+import React from "react";
+import { FiShoppingCart } from "react-icons/fi";
+import { MDBBadge } from "mdb-react-ui-kit";
 const CartWidget = (props) => {
-    return (
-        <div className='container' style={{ justifyContent: 'center', display:'flex' }}> 
+  return (
+    <div className="justify-content-center" >
 
-        <div className='cart-icon'>
-        <BsCartFill size={23} > </BsCartFill>
-        </div>
+      <FiShoppingCart className="m-2" size={18}></FiShoppingCart>
 
-        <div className='cart-number '
-        style={{ textAlign:'center', color:'white', 
-        backgroundColor:'red' , borderRadius:'50%', height:'20px' , width:'20px' , justifyContent:'center'}}
-        >
-        <h6>1</h6>
-        </div>
+        <MDBBadge pill color="danger"  className="badge rounded-pill badge-notification bg-danger flex-end ">
+        {props.text}
+      </MDBBadge>
+    </div>
 
-
-
-
-        </div>
-
-    );
-}
+  );
+};
 
 export default CartWidget;
