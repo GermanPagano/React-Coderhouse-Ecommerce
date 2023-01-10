@@ -4,8 +4,9 @@
 }
 .searcItem button {
     border-color: #ccc; 
+    background-color: #fafafa;
     border-radius: 20px;
-    color: #8f8f8f;
+    color: #323030;
 }
 .searcItem button:hover {
     background-color: #ccc; 
