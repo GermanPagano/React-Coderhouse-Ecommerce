@@ -54,8 +54,6 @@ const SliderHome = () => {
             }
         ]
     };
-
-    console.log(products)
     return (
         <div className="slider-Home-Container">
             <Slider {...settings} autoplay className="slider">

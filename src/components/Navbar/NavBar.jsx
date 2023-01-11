@@ -21,9 +21,12 @@ import Favorites from "./Favorites";
 import User from "./User";
 import "./NavStyles.css";
 import { Link } from "react-router-dom";
+
 const NavBar = () => {
   const [showNavSecond, setShowNavSecond] = useState(false);
 
+
+  console.log()
   return (
     <MDBNavbar className="nav " expand="lg" fixed="top" onClick={() => setShowNavSecond(!showNavSecond)}>
       <MDBContainer className="nav-container ">

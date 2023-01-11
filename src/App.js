@@ -15,19 +15,18 @@ function App() {
 
       <BrowserRouter>
           <div className="App">
-        <NavBar />
+          <NavBar />
         <SearchItem ></SearchItem>
         <Routes>
           <Route path="/" exact element={<HomePage />} />{/* ruta requerida para entrega 2 */}
-          <Route path="/about" element={<h1>Soy el about</h1>} />
+          <Route path="/about" element={<h1>About proximamente en constuccion</h1>} />
           <Route path="/item/name/:ItemName" element={<ItemListContainer/>}/>
           <Route path="/category/:ItemConsole" element={<ItemListContainer />}/>{/* ruta requerida para entrega 2 */}
           <Route path="/item/:itemid" element={<ItemDeatailContainer />} />{/* ruta requerida para entrega 2 */}
           <Route path="*" element={<PageNotFound/>} />
         </Routes>
-
         <Footer/>
-        </div>
+        </div> 
       </BrowserRouter>
 
   );
