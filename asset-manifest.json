@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Coderhouse-Ecommerce/static/css/main.f1721204.css",
-    "main.js": "/React-Coderhouse-Ecommerce/static/js/main.0f8a55d4.js",
+    "main.js": "/React-Coderhouse-Ecommerce/static/js/main.346e8ead.js",
     "static/media/404.png": "/React-Coderhouse-Ecommerce/static/media/404.091b5d1a713e65933c51.png",
     "static/media/Mortal-Kombat-11-Ultimate-Edition-193x288.jpg": "/React-Coderhouse-Ecommerce/static/media/Mortal-Kombat-11-Ultimate-Edition-193x288.4b6cdd37b4e86c7ceba2.jpg",
     "static/media/Captain-Tsubasa-Rise-of-New-Champions.jpg": "/React-Coderhouse-Ecommerce/static/media/Captain-Tsubasa-Rise-of-New-Champions.06850a9e019d743f036e.jpg",
@@ -17,6 +17,7 @@
     "static/media/Mafia-Edicion-Definitiva.jpg": "/React-Coderhouse-Ecommerce/static/media/Mafia-Edicion-Definitiva.b89feb3fbff5e73260a2.jpg",
     "static/media/Cyberpunk-2077.jpg": "/React-Coderhouse-Ecommerce/static/media/Cyberpunk-2077.96d5cabeaa519a7f811c.jpg",
     "static/media/Marvels-SpiderMan-Miles-Morales.jpg": "/React-Coderhouse-Ecommerce/static/media/Marvels-SpiderMan-Miles-Morales.a059b565de0839378a1c.jpg",
+    "static/media/Cartel-Tycoon.jpg": "/React-Coderhouse-Ecommerce/static/media/Cartel-Tycoon.60e3a5864c6ee890eef7.jpg",
     "static/media/dead-space-2613-poster.jpg": "/React-Coderhouse-Ecommerce/static/media/dead-space-2613-poster.1fca191a0368551a6428.jpg",
     "static/media/Alan-Wake-Remastered.jpg": "/React-Coderhouse-Ecommerce/static/media/Alan-Wake-Remastered.9f720c9ec3ba57148b34.jpg",
     "static/media/brand.png": "/React-Coderhouse-Ecommerce/static/media/brand.e7ca8b87d98485ff34e9.png",
@@ -26,10 +27,10 @@
     "static/media/slick.woff": "/React-Coderhouse-Ecommerce/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/React-Coderhouse-Ecommerce/index.html",
     "main.f1721204.css.map": "/React-Coderhouse-Ecommerce/static/css/main.f1721204.css.map",
-    "main.0f8a55d4.js.map": "/React-Coderhouse-Ecommerce/static/js/main.0f8a55d4.js.map"
+    "main.346e8ead.js.map": "/React-Coderhouse-Ecommerce/static/js/main.346e8ead.js.map"
   },
   "entrypoints": [
     "static/css/main.f1721204.css",
-    "static/js/main.0f8a55d4.js"
+    "static/js/main.346e8ead.js"
   ]
 }
