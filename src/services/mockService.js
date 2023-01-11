@@ -14,6 +14,7 @@ import GodOfWar from "../assets/img/games-img/principal/God-of-War.jpg";
 import Scorn from "../assets/img/games-img/principal/Scorn-Deluxe-Edition.jpg";
 import FootballManager from "../assets/img/games-img/principal/football-manager-2021-1.jpg";
 import PES21 from "../assets/img/games-img/principal/eFootball-PES-2021.jpg";
+import CartelTycoon from "../assets/img/games-img/principal/Cartel-Tycoon.jpg";
 
 const products = [
   {
@@ -191,6 +192,17 @@ const products = [
       "eFootball PES 2021 Season Update incluye todas las características que hicieron que PES fuera merecedor del premio «Best Sports Game» en el E3 de 2019 ¡y muchas más! La saga PES, nacida en 1995, cumple este año un cuarto de siglo. Te invitamos a que vuelvas a pisar el terreno de juego con nosotros en una nueva temporada que estará repleta de emociones. Además de contener los datos más recientes de jugadores y clubes, el juego incluye también el exclusivo modo UEFA EURO 2020™, donde tus amigos y tú podréis simular algunas de las rivalidades más encarnizadas del deporte rey.",
     price: 100,
     stock: 100,
+  },
+  {
+    id: 17,
+    imgUrl: CartelTycoon,
+    console: "XBOX",
+    title: "Cartel Tycoon",
+    category: "Accion || estrategia ",
+    description:
+      "Cartel Tycoon es un juego de estrategia y está ambientado en una Latinoamérica ficticia de los años 80 y cuenta la historia de una época en la que la cocaína dominó Estados Unidos y el mundo entero. Unos señores de la droga, absurdamente ricos, gobiernan sus imperios gloriosos a la par que crean miles de puestos de trabajo, pero, a pesar de todo, la violencia es una constante en este mundo criminal.",
+    price: 50,
+    stock: 8,
   }
 ];
 
