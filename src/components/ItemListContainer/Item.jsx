@@ -59,7 +59,7 @@ const Item = ({
             $ {price}
           </h6>
 
-          {/* <button className="btn" ><FiHeart size={17} /></button>      */}
+          {/* <button className="btn" ><FiHeart size={17} /></button> */}
           <p>Available: {stockInitial}</p>
           <BtnAddToCart
             stockInitial={ stockInitial }
