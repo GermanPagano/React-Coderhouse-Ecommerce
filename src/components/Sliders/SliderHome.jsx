@@ -22,7 +22,7 @@ const SliderHome = () => {
     var settings = {
         dots: true,
         infinite: true,
-        speed: 3000,
+        speed: 2000,
         slidesToShow: 4,
         slidesToScroll: 4,
         swipeToSlide: true,
