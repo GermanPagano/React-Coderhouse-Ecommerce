@@ -57,7 +57,7 @@ z-index: 2;
 
 
 
-.btn:active{
+.btn-card:active{
     transform:translateY(2px);
 
 }

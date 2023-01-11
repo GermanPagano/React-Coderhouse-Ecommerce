@@ -1,0 +1,19 @@
+
+.slider{
+    padding: 0px;
+    border-radius: 5px;
+}
+.slider div {
+    display: flex;
+    padding: 1rem;
+}
+.box-slider-home {
+    background-color: #000;
+    border-radius: 20px;
+
+}
+.box-slider-home img {
+    max-width: 100%;
+    border-radius: 5px;
+
+}

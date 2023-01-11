@@ -166,7 +166,7 @@ const products = [
     id: 15,
     imgUrl: CyberPunk,
     console: "XBOX",
-    title: "CyberPunk 2077",
+    title: "COD",
     category: "Accion | rol ",
     description:
       "Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad. Podrás personalizar las mejoras cibernéticas, las habilidades y el estilo de juego del personaje para dar forma a un mundo y a una historia que depende de tus decisiones.",
@@ -217,5 +217,16 @@ const getProductCategory = (ItemConsole) => {
   })
 }
 
-export { getProduct, getProductCategory };
+/**  const getProductByName = (ItemName) => {
+  return new Promise( (resolve,reject)=>{
+    console.log("el nombre a buscar en el mock " + ItemName);
+    let reqProd = products.find((item)=> item.title === ItemName)
+    setTimeout(() => {
+      reqProd? resolve(reqProd): reject('No existe ese nombre')    
+    }, 1000);
+  })
+} */
+
+
+export { getProduct, getProductCategory  };
 export default CatchProductsOfMock;

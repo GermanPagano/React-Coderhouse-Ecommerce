@@ -2,7 +2,6 @@ import { getProduct } from "../../services/mockService";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./ItemDetailContainer-Styeles.css";
-import BtnAddToCart from "../Btn-Add-To-Cart/Btn-Add-To-Cart";
 
 function ItemDeatailContainer() {
 
@@ -17,16 +16,19 @@ function ItemDeatailContainer() {
   let params = useParams();
 
   useEffect(() => {
-
       getProduct(params.itemid)
     .then((resp) => setDetail(resp))
     .catch((err) => setDetail(notFound))
+  }, [ ]);  // eslint-disable-line 
 
-  }, [ ]); 
 
 
+
+
+
+
+// estado para guardar la cantidad del producto elegido
   const [stock, setstock] = useState(1);
-
   return (
     <div className="detail-container container ">
       <div className="details">

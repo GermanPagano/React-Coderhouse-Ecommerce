@@ -25,8 +25,8 @@ const NavBar = () => {
   const [showNavSecond, setShowNavSecond] = useState(false);
 
   return (
-    <MDBNavbar className="nav" expand="lg" fixed="top">
-      <MDBContainer className="nav-container">
+    <MDBNavbar className="nav " expand="lg" fixed="top" onClick={() => setShowNavSecond(!showNavSecond)}>
+      <MDBContainer className="nav-container ">
         <MDBNavbarBrand className="brand-container" href="#/">
           <Link to={"/"}>
             <img src={brand} alt="brand" />
@@ -42,8 +42,8 @@ const NavBar = () => {
           <MDBIcon icon="bars" fas />
         </MDBNavbarToggler>
 
-        <MDBCollapse navbar show={showNavSecond} className="nav-link">
-          <MDBNavbarNav>
+        <MDBCollapse navbar show={showNavSecond} className="nav-link ">
+          <MDBNavbarNav >
             <MDBNavbarLink>
               <Link to="/">Home</Link>
             </MDBNavbarLink>
