@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Item from "./Item";
 import "./ItemlistStyles.css";
 import { MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import CatchProductsOfMock, {
@@ -7,6 +6,7 @@ import CatchProductsOfMock, {
  //getProductByName,
 } from "../../services/mockService";
 import { useParams } from "react-router-dom";
+import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
   // estado para guardar los productos
@@ -32,24 +32,6 @@ const ItemListContainer = () => {
           .catch((e) => console.log(e));
   }, [ItemConsole]);
 
-  /* let ItemName= useParams().ItemName
-    console.log( ItemName )
-    useEffect(() => {
-      ItemName ?(
-        getProductByName(ItemName)
-          // de ser exitosa la devolucion guardo lo recibido en el useState
-          .then( response => setProduct(response))
-          // de ser erronea la respuesta mostrar el error por consola
-          .catch((e) => console.log(e))
-      ):(
-            //llamo a a funcion 
-      CatchProductsOfMock()
-      // de ser exitosa la devolucion guardo lo recibido en el useState
-      .then( response => setProduct(response))
-      // de ser erronea la respuesta mostrar el error por consola
-      .catch((e) => console.log(e)))
-    }, [ItemName]); */
-
   const handleAddtoCart = (allItems) => {
     const product_selected = products.find(
       (element) => element.id === allItems.id
@@ -68,24 +50,12 @@ const ItemListContainer = () => {
   return (
     <MDBContainer fluid className=" container my-5 text-center ">
       <MDBRow>
-        {products.map((element) => {
-          const stockVerifier =
-            element.stock < 1 ? "not available" : element.stock;
-          return (
-            <Item
-              allItems={element}
-              key={element.id}
-              imgUrl={element.imgUrl}
-              console={element.console}
-              title={element.title}
-              category={element.category}
-              price={element.price}
-              id={element.id}
-              stockInitial={stockVerifier}
-              handleAddtoCart={handleAddtoCart}
-            ></Item>
-          );
-        })}
+
+      <ItemList
+        products={products}
+        handleAddtoCart={handleAddtoCart}
+      />
+
       </MDBRow>
     </MDBContainer>
   );

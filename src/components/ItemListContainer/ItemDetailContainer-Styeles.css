@@ -1,9 +1,12 @@
 .detail-container {
   max-width: 1200px;
   width: 100%;
-  margin: 1rem auto;
-  box-shadow: 0 0 5px #ccc;
+  margin: 3rem;
+  box-shadow: 0.1rem 1rem 30px rgba(204, 204, 204, 0.338);
   border-radius: 5px;
+  color: whitesmoke;
+  min-height: auto;
+  background: linear-gradient(315deg, rgb(0, 0, 0), rgb(28, 28, 34) )
 }
 .details {
   display: flex;
@@ -39,7 +42,7 @@
     letter-spacing: 2px;
   }
   .box .row span {
-    color: crimson;
+    color: green;
   }
   .box button {
     border: 1px solid #333;

@@ -6,6 +6,14 @@ import SpiderMan from "../assets/img/games-img/principal/Marvels-SpiderMan-Miles
 import AlanWake from "../assets/img/games-img/principal/Alan-Wake-Remastered.jpg";
 import Mafia from "../assets/img/games-img/principal/Mafia-Edicion-Definitiva.jpg";
 import CyberPunk from "../assets/img/games-img/principal/Cyberpunk-2077.jpg";
+import Mk11 from "../assets/img/games-img/principal/Mortal-Kombat-11-Ultimate-Edition-193x288.jpg";
+import Tsubasa from "../assets/img/games-img/principal/Captain-Tsubasa-Rise-of-New-Champions.jpg";
+import Uncharted from "../assets/img/games-img/principal/Uncharted-4-Legacy-of-Thieves-Collection.jpg";
+import KartTracers from "../assets/img/games-img/principal/Nickelodeon-Kart-Racers-3-Slime-Speedway.jpg";
+import GodOfWar from "../assets/img/games-img/principal/God-of-War.jpg";
+import Scorn from "../assets/img/games-img/principal/Scorn-Deluxe-Edition.jpg";
+import FootballManager from "../assets/img/games-img/principal/football-manager-2021-1.jpg";
+import PES21 from "../assets/img/games-img/principal/eFootball-PES-2021.jpg";
 
 const products = [
   {
@@ -98,80 +106,91 @@ const products = [
   },
   {
     id: 9,
-    imgUrl: CyberPunk,
+    imgUrl: Mk11,
     console: "XBOX",
-    title: "CyberPunk 2077",
-    category: "Accion | rol ",
+    title: "Mortal Kombat 11",
+    category: "Accion | lucha ",
     description:
-      "Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad. Podrás personalizar las mejoras cibernéticas, las habilidades y el estilo de juego del personaje para dar forma a un mundo y a una historia que depende de tus decisiones.",
+      "Las nuevas variantes de los personajes te ofrecen un control de tus kombatientes sin precedentes, ya que podrás personalizarlos como tú quieras. El motor gráfico, además de mostrar con gran detalle cada destrucción craneal y ocular, te acercará tanto al kombate que casi podrás sentirlo. Y eso no es todo: las cinemáticas del modo Historia te traen a los kombatientes klásicos y a nuevos personajes, que continuarán esta épica saga creada hace 25 años.",
     price: 656.25,
     stock: 10,
   },
   {
     id: 10,
-    imgUrl: CyberPunk,
-    console: "XBOX",
-    title: "CyberPunk 2077",
-    category: "Accion | rol ",
+    imgUrl: Tsubasa,
+    console: "PS4",
+    title: "Captain Tsubasa",
+    category: "Accion | anime ",
     description:
-      "Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad. Podrás personalizar las mejoras cibernéticas, las habilidades y el estilo de juego del personaje para dar forma a un mundo y a una historia que depende de tus decisiones.",
+      "Captain Tsubasa: Rise of New Champions es un juego de fútbol de novedoso, pero con la acción trepidante y los tiros imposibles de siempre. Crea personajes con nuevas aptitudes y habilidades y usa tu «dream team» en partidos sin conexión y en red. Compite con amigos en partidos sin conexión de hasta 4 jugadores. Revive momentos del anime o forma parte del mundo de Captain Tsubasa.",
     price: 656.25,
     stock: 10,
   },
   {
     id: 11,
-    imgUrl: CyberPunk,
-    console: "XBOX",
-    title: "CyberPunk 2077",
+    imgUrl: Uncharted,
+    console: "PC",
+    title: "Uncharted 4",
     category: "Accion | rol ",
     description:
-      "Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad. Podrás personalizar las mejoras cibernéticas, las habilidades y el estilo de juego del personaje para dar forma a un mundo y a una historia que depende de tus decisiones.",
+      "En Uncharted 4 Legacy of Thieves Collection busca tu fortuna y deja tu marca en el mapa en UNCHARTED: Colección Legado de ladrones. Descubre la emocionante narrativa de estilo cinematográfico y las exitosas y más importantes escenas de acción de la franquicia UNCHARTED, repletas de la astucia, el ingenio y los mejores momentos de los queridos ladrones, Nathan Drake y Chloe Frazer.",
     price: 656.25,
     stock: 10,
   },
   {
     id: 12,
-    imgUrl: CyberPunk,
+    imgUrl: KartTracers,
     console: "XBOX",
-    title: "CyberPunk 2077",
-    category: "Accion | rol ",
+    title: "Nickelodeon Kart Racers 3",
+    category: "Carrera | Multijugador ",
     description:
-      "Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad. Podrás personalizar las mejoras cibernéticas, las habilidades y el estilo de juego del personaje para dar forma a un mundo y a una historia que depende de tus decisiones.",
+      "Nickelodeon Kart Racers 3 Slime Speedway está reconstruido y reimaginado desde cero, ¡Nickelodeon Kart Racers regresa más grande y mejor que nunca! Incluye un reparto de voces de más de 40 personajes icónicos. ¡Derrapa, desliza y acelera en tu camino hasta la meta en pistas inspiradas en las legendarias animaciones de Nickelodeon como SpongeBob SquarePants, Teenage Mutant Ninja Turtles, Avatar: The Last Airbender y más!.",
     price: 656.25,
     stock: 10,
   },
   {
     id: 13,
-    imgUrl: CyberPunk,
-    console: "XBOX",
-    title: "CyberPunk 2077",
-    category: "Accion | rol ",
+    imgUrl: GodOfWar,
+    console: "PS4",
+    title: "God Of War",
+    category: "Accion | aventura ",
     description:
-      "Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad. Podrás personalizar las mejoras cibernéticas, las habilidades y el estilo de juego del personaje para dar forma a un mundo y a una historia que depende de tus decisiones.",
+      "Kratos ha dejado atrás su venganza contra los dioses del Olimpo y vive ahora como un hombre en los dominios de los dioses y monstruos nórdicos. En este mundo cruel e implacable debe luchar para sobrevivir… y enseñar a su hijo a hacerlo también.",
     price: 656.25,
     stock: 10,
   },
   {
     id: 14,
-    imgUrl: CyberPunk,
+    imgUrl: Scorn,
     console: "XBOX",
-    title: "CyberPunk 2077",
-    category: "Accion | rol ",
+    title: "Scorn Deluxe Edition",
+    category: "Aventura | terror ",
     description:
-      "Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad. Podrás personalizar las mejoras cibernéticas, las habilidades y el estilo de juego del personaje para dar forma a un mundo y a una historia que depende de tus decisiones.",
+      "Scorn Deluxe Edition es un juego de terror atmosférico en primera persona ambientado en un universo escalofriante de formas extrañas y realidad sombría. Está diseñado en torno a la idea de haber sido arrojado al mundo. Aislado y perdido dentro de este mundo onírico, explorarás diferentes regiones conectadas entre sí de una manera no lineal. El propio ambiente tenebroso e inquietante es un personaje como tal.",
     price: 656.25,
     stock: 10,
   },
   {
     id: 15,
-    imgUrl: CyberPunk,
-    console: "XBOX",
-    title: "COD",
-    category: "Accion | rol ",
+    imgUrl: FootballManager,
+    console: "PC",
+    title: "Football Manager 2021",
+    category: "Deportes",
     description:
-      "Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad. Podrás personalizar las mejoras cibernéticas, las habilidades y el estilo de juego del personaje para dar forma a un mundo y a una historia que depende de tus decisiones.",
+      "Football Manager 2021 es un juego de simulación. El mánager es el corazón de cualquier club de fútbol. Y Football Manager 2021 trae experiencias de gestión dinámicas y auténticas, además de detalles espectaculares pensados especialmente para ti. ¡Te brindamos las herramientas para que llegues a lo más alto! Dispones de más de 50 países y 2500 clubes de todos los niveles de la pirámide del fútbol, así que las posibilidades son infinitas. Tú decides, mánager.",
     price: 656.25,
     stock: 10,
+  },
+  {
+    id: 16,
+    imgUrl: PES21,
+    console: "PC",
+    title: "eFootball PES 2021",
+    category: "Deportes ",
+    description:
+      "eFootball PES 2021 Season Update incluye todas las características que hicieron que PES fuera merecedor del premio «Best Sports Game» en el E3 de 2019 ¡y muchas más! La saga PES, nacida en 1995, cumple este año un cuarto de siglo. Te invitamos a que vuelvas a pisar el terreno de juego con nosotros en una nueva temporada que estará repleta de emociones. Además de contener los datos más recientes de jugadores y clubes, el juego incluye también el exclusivo modo UEFA EURO 2020™, donde tus amigos y tú podréis simular algunas de las rivalidades más encarnizadas del deporte rey.",
+    price: 100,
+    stock: 100,
   }
 ];
 

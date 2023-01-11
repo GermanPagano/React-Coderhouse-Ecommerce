@@ -28,7 +28,31 @@ function ItemDeatailContainer() {
 
 
 // estado para guardar la cantidad del producto elegido
-  const [stock, setstock] = useState(1);
+  const [cantToBuy, setcantToBuy] = useState(0);
+  const [disablerAddBtn, setDisablerAddBtn] = useState(false);
+  const [disablerRestBtn, setdisablerRestBtn] = useState(false);
+  
+
+  const handleAddOne = () => {
+    if( detail.stock >= 1 ) {
+      setcantToBuy( cantToBuy + 1 )
+      detail.stock = detail.stock -1
+
+      disablerRestBtn  && ( setdisablerRestBtn( !disablerRestBtn ))
+    }
+    detail.stock < 1 && ( setDisablerAddBtn( !disablerAddBtn ))  
+  }
+
+  const handleRestOne = () => {
+    if( cantToBuy >= 1 ){
+      setcantToBuy( cantToBuy - 1 )
+      detail.stock = detail.stock + 1
+
+      disablerAddBtn  && ( setDisablerAddBtn( !disablerAddBtn ))
+    }
+    cantToBuy === 0 && ( setdisablerRestBtn( !disablerRestBtn ))
+  }
+
   return (
     <div className="detail-container container ">
       <div className="details">
@@ -45,12 +69,13 @@ function ItemDeatailContainer() {
           <div className="box-description">
           <p>{detail.description}</p>
           </div>
-          {`stock total ${detail.stock}`}
+          {`stock total  ${ detail.stock}`}
           <div className="add-rest-cant">
-            <button disabled={stock === 0 } onClick={()=>setstock(stock -1 )}>-</button>
+            <button disabled={ disablerRestBtn } onClick={handleRestOne}>-</button>
             
-            { stock }
-            <button disabled={stock === detail.stock} onClick={()=>setstock(stock+1)}>+</button>
+            { cantToBuy }
+
+            <button disabled={ disablerAddBtn } onClick={handleAddOne}>+</button>
           </div>
         </div>
       </div>

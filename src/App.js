@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDeatailContainer from "./components/ItemListContainer/ItemDeatailContainer";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import HomePage from "./pages/HomePage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
@@ -16,7 +17,6 @@ function App() {
           <div className="App">
         <NavBar />
         <SearchItem ></SearchItem>
-
         <Routes>
           <Route path="/" exact element={<HomePage />} />{/* ruta requerida para entrega 2 */}
           <Route path="/about" element={<h1>Soy el about</h1>} />
@@ -25,6 +25,8 @@ function App() {
           <Route path="/item/:itemid" element={<ItemDeatailContainer />} />{/* ruta requerida para entrega 2 */}
           <Route path="*" element={<PageNotFound/>} />
         </Routes>
+
+        <Footer/>
         </div>
       </BrowserRouter>
 
