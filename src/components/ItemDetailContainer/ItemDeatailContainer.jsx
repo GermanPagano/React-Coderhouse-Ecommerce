@@ -1,7 +1,7 @@
-import { getProduct } from "../../services/mockService";
+import { getProduct } from "../../services/mockService.js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./ItemDetailContainer-Styeles.css";
+import "./StylesItemDetailContainer.css";
 
 function ItemDeatailContainer() {
 

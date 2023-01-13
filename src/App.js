@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SearchItem from "./components/SearchItem/SearchItem";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemDeatailContainer from "./components/ItemListContainer/ItemDeatailContainer";
+import ItemDeatailContainer from "./components/ItemDetailContainer/ItemDeatailContainer";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
