@@ -1,35 +1,55 @@
-
-.nav{
-    background: linear-gradient(315deg , #03a8f4c1  , #ff0059be);
+.nav {
+    background: linear-gradient(315deg, #03a8f4c1, #ff0059be);
     position: relative;
-    margin: 0.8rem 1rem;
+    margin: 10px 30px;
     text-align: center;
 }
 
-.nav-container{
+.nav-container {
     background-color: transparent;
 }
-.nav-ico-toggler{
+
+.menu-icon {
     color: white;
-}
-.brand-container img{
-    max-height: 50px;
-}
-.nav-link a{
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
 }
 
-.nav-link a:hover{
-    color: #ff0059be;
-}
-.nav-ico-actions:active{
+.menu-icon:active {
     transform: translateY(2px);
 }
-.nav-category{
-    background: linear-gradient(315deg , #03a8f4c1  , #ff0059be);
-    background-color: rgb(19, 16, 16) !important;
+
+.brand-container img {
+    max-height: 50px;
 }
 
+.nav-link a {
+    color: white !important;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 
+.drop-Container {
+    background-color: transparent !important;
+}
+
+.drop-item {
+    background-color: rgb(19, 16, 16) !important;
+    font-weight: 500 !important;
+    width: 100%;
+}
+
+.nav-link a:hover {
+    color: #ff0059be !important;
+}
+
+.nav-link a:active {
+    transform: translateY(2px) !important;
+}
+
+.nav-ico-actions:active {
+    transform: translateY(2px) !important;
+}

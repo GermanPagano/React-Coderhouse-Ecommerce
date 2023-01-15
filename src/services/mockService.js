@@ -248,16 +248,20 @@ const getProductCategory = (ItemConsole) => {
   })
 }
 
-/**  const getProductByName = (ItemName) => {
+/*
+// funcion para buscar productos por el input
+  const getProductByName = (ItemName) => {
   return new Promise( (resolve,reject)=>{
     console.log("el nombre a buscar en el mock " + ItemName);
     let reqProd = products.find((item)=> item.title === ItemName)
+    console.log(reqProd)
+
     setTimeout(() => {
-      reqProd? resolve(reqProd): reject('No existe ese nombre')    
+      reqProd ? resolve(reqProd): reject('No existe ese nombre')    
     }, 1000);
   })
-} */
+} 
+*/
 
-
-export { getProduct, getProductCategory  };
+export { getProduct, getProductCategory , /*getProductByName */ };
 export default CatchProductsOfMock;

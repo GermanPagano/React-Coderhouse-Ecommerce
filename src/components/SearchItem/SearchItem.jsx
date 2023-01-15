@@ -1,12 +1,12 @@
 import "./SearchItem.css";
 import { MDBInputGroup, MDBBtn } from "mdb-react-ui-kit";
 import { FiSearch } from "react-icons/fi";
-// import {useState} from 'react'
-// import { getProductByName } from "../../services/mockService";
+// import {useState, useEffect} from 'react'
+ //import { getProductByName } from "../../services/mockService";
 
 const SearchItem = () => {
 
-/* const [search, setSearch] = useState('')
+/* const [search, setSearch] = useState() 
   const handleSearch = (e) => {
     if (e.key === "Enter") {
       console.log('deberiamos buscar '+ e.target.value);
@@ -14,8 +14,10 @@ const SearchItem = () => {
       e.target.value = ''
     }
   };
-  getProductByName(search) */
+ 
 
+useEffect(() => {
+}, [search]); */
 
   return (
 
@@ -24,7 +26,7 @@ const SearchItem = () => {
       <MDBInputGroup className=" searcItem col-10 ">
       
         <input
-         // onKeyDown={handleSearch}
+          //onKeyDown={ handleSearch }
           autoFocus
           className="form-control "
           placeholder="Search"

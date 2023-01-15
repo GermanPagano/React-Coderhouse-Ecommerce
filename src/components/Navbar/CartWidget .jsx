@@ -4,15 +4,15 @@ import { MDBBadge } from "mdb-react-ui-kit";
 
 const CartWidget = (props) => {
   return (
-    <div className="justify-content-center" >
+    <div className="justify-content-center">
+      <FiShoppingCart className="m-2" size={20}></FiShoppingCart>
 
-      <FiShoppingCart className="m-2" size={18}></FiShoppingCart>
-
-        <MDBBadge pill color="danger"  className="badge rounded-pill badge-notification bg-danger flex-end ">
-        {props.text}
-      </MDBBadge>
+      <MDBBadge
+        pill
+        color="danger"
+        className="badge rounded-pill badge-notification bg-danger flex-end "
+      ></MDBBadge>
     </div>
-
   );
 };
 

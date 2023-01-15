@@ -1,5 +1,4 @@
 import "./App.css";
-import NavBar from "./components/Navbar/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SearchItem from "./components/SearchItem/SearchItem";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
@@ -8,6 +7,7 @@ import ItemDeatailContainer from "./components/ItemDetailContainer/ItemDeatailCo
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
+import NavbarComp from './components/Navbar/NavbarComp';
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
 
       <BrowserRouter>
           <div className="App">
-          <NavBar />
+          <NavbarComp/>
         <SearchItem ></SearchItem>
         <Routes>
           <Route path="/" exact element={<HomePage />} />{/* ruta requerida para entrega 2 */}
