@@ -1,20 +1,16 @@
 import { useEffect, useState } from "react";
 import "./ItemlistStyles.css";
 import { MDBContainer, MDBRow } from "mdb-react-ui-kit";
-import CatchProductsOfMock, {
-  getProductCategory,
- //getProductByName,
-} from "../../services/mockService";
+import CatchProductsOfMock, {getProductCategory,} from "../../services/mockService";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
+
   // estado para guardar los productos
   const [products, setProduct] = useState([]);
-
   // utilizo el useParams para poder tomar el valor de la url que necesito filtrar como categoria
   let ItemConsole = useParams().ItemConsole;
-
   // useEffect para ejecutar la funcion que ira a buscar los productos al mockService
   useEffect(() => {
     ItemConsole
@@ -47,6 +43,9 @@ const ItemListContainer = () => {
       : console.log("");
       
   };
+
+
+
 
   return (
     <MDBContainer fluid className=" container my-5 text-center ">
