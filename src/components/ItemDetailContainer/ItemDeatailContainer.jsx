@@ -2,6 +2,11 @@ import { getProduct } from "../../services/mockService.js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./StylesItemDetailContainer.css";
+import ButtonComponent from '../ButtonComponent/ButtonComponent'
+import { GrFormAdd } from "react-icons/gr";
+import { GrFormSubtract } from "react-icons/gr";
+
+
 
 function ItemDeatailContainer() {
 
@@ -53,6 +58,11 @@ function ItemDeatailContainer() {
     cantToBuy === 0 && ( setdisablerRestBtn( !disablerRestBtn ))
   }
 
+
+  const handleAddToCart = (evt) => {
+    alert( `Added: ${cantToBuy} of ${evt.title} to cart` )
+  }
+
   return (
     <div className="detail-container container ">
       <div className="details">
@@ -71,12 +81,25 @@ function ItemDeatailContainer() {
           </div>
           {`stock total  ${ detail.stock}`}
           <div className="add-rest-cant">
-            <button disabled={ disablerRestBtn } onClick={handleRestOne}>-</button>
-            
+            <ButtonComponent 
+            onDisabler={ disablerRestBtn } 
+            handlerOnclick={ handleRestOne }
+            text={<GrFormSubtract/>}
+            />
             { cantToBuy }
-
-            <button disabled={ disablerAddBtn } onClick={handleAddOne}>+</button>
+            <ButtonComponent 
+            onDisabler={ disablerAddBtn } 
+            handlerOnclick={ handleAddOne }
+            text={<GrFormAdd/>}
+            />
           </div>
+          <div className="add-rest-cant">
+          <ButtonComponent 
+            onDisabler={false}
+            handlerOnclick={ ()=> handleAddToCart(detail) }
+            text={'Add to cart'}
+            />
+            </div>
         </div>
       </div>
     </div>

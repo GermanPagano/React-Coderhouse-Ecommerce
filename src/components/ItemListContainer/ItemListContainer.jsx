@@ -28,21 +28,7 @@ const ItemListContainer = () => {
           .catch((e) => console.log(e));
   }, [ItemConsole]);
 
-  const handleAddtoCart = (allItems) => {
-    const product_selected = products.find(
-      (element) => element.id === allItems.id
-    );
-    product_selected
-      ? setProduct(
-          products.map((item) =>
-            item.id === allItems.id
-              ? { ...product_selected, stock: product_selected.stock - 1 }
-              : item
-          )
-        )
-      : console.log("");
-      
-  };
+
 
 
 
@@ -50,12 +36,9 @@ const ItemListContainer = () => {
   return (
     <MDBContainer fluid className=" container my-5 text-center ">
       <MDBRow>
-
       <ItemList
         products={products}
-        handleAddtoCart={handleAddtoCart}
       />
-
       </MDBRow>
     </MDBContainer>
   );
