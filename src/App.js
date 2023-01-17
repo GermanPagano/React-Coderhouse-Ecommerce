@@ -8,15 +8,17 @@ import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
 import NavbarComp from './components/Navbar/NavbarComp';
+import { CartProvider } from "./storage/cartContext";
 
 function App() {
 
   return (
-
+ 
+<div className="App">
+    <CartProvider> 
       <BrowserRouter>
-          <div className="App">
           <NavbarComp/>
-        <SearchItem ></SearchItem>
+          <SearchItem ></SearchItem>
         <Routes>
           <Route path="/" exact element={<HomePage />} />{/* ruta requerida para entrega 2 */}
           <Route path="/about" element={<h1>About proximamente en constuccion</h1>} />
@@ -25,9 +27,10 @@ function App() {
           <Route path="/item/:itemid" element={<ItemDeatailContainer />} />{/* ruta requerida para entrega 2 */}
           <Route path="*" element={<PageNotFound/>} />
         </Routes>
-        <Footer/>
-        </div> 
+          <Footer/>
       </BrowserRouter>
+     </CartProvider> 
+</div>
 
   );
 }

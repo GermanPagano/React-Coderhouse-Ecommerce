@@ -11,7 +11,7 @@ const CartWidget = (props) => {
         pill
         color="danger"
         className="badge rounded-pill badge-notification bg-danger flex-end "
-      ></MDBBadge>
+      >{props.text}</MDBBadge>
     </div>
   );
 };

@@ -2,14 +2,10 @@ import { getProduct } from "../../services/mockService.js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./StylesItemDetailContainer.css";
-import ButtonComponent from '../ButtonComponent/ButtonComponent'
-import { GrFormAdd } from "react-icons/gr";
-import { GrFormSubtract } from "react-icons/gr";
-
+import ItemCount from "./ItemCount.jsx";
 
 
 function ItemDeatailContainer() {
-
 
   const notFound = {
     imgUrl:
@@ -25,43 +21,6 @@ function ItemDeatailContainer() {
     .then((resp) => setDetail(resp))
     .catch((err) => setDetail(notFound))
   }, [ ]);  // eslint-disable-line 
-
-
-
-
-
-
-
-// estado para guardar la cantidad del producto elegido
-  const [cantToBuy, setcantToBuy] = useState(0);
-  const [disablerAddBtn, setDisablerAddBtn] = useState(false);
-  const [disablerRestBtn, setdisablerRestBtn] = useState(false);
-  
-
-  const handleAddOne = () => {
-    if( detail.stock >= 1 ) {
-      setcantToBuy( cantToBuy + 1 )
-      detail.stock = detail.stock -1
-
-      disablerRestBtn  && ( setdisablerRestBtn( !disablerRestBtn ))
-    }
-    detail.stock < 1 && ( setDisablerAddBtn( !disablerAddBtn ))  
-  }
-
-  const handleRestOne = () => {
-    if( cantToBuy >= 1 ){
-      setcantToBuy( cantToBuy - 1 )
-      detail.stock = detail.stock + 1
-
-      disablerAddBtn  && ( setDisablerAddBtn( !disablerAddBtn ))
-    }
-    cantToBuy === 0 && ( setdisablerRestBtn( !disablerRestBtn ))
-  }
-
-
-  const handleAddToCart = (evt) => {
-    alert( `Added: ${cantToBuy} of ${evt.title} to cart` )
-  }
 
   return (
     <div className="detail-container container ">
@@ -80,26 +39,8 @@ function ItemDeatailContainer() {
           <p>{detail.description}</p>
           </div>
           {`stock total  ${ detail.stock}`}
-          <div className="add-rest-cant">
-            <ButtonComponent 
-            onDisabler={ disablerRestBtn } 
-            handlerOnclick={ handleRestOne }
-            text={<GrFormSubtract/>}
-            />
-            { cantToBuy }
-            <ButtonComponent 
-            onDisabler={ disablerAddBtn } 
-            handlerOnclick={ handleAddOne }
-            text={<GrFormAdd/>}
-            />
-          </div>
-          <div className="add-rest-cant">
-          <ButtonComponent 
-            onDisabler={false}
-            handlerOnclick={ ()=> handleAddToCart(detail) }
-            text={'Add to cart'}
-            />
-            </div>
+          
+          <ItemCount detail={detail}/>
         </div>
       </div>
     </div>
