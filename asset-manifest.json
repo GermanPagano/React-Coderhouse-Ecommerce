@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-Coderhouse-Ecommerce/static/css/main.fd09d6af.css",
-    "main.js": "/React-Coderhouse-Ecommerce/static/js/main.ebf8d71a.js",
+    "main.css": "/React-Coderhouse-Ecommerce/static/css/main.13c0e218.css",
+    "main.js": "/React-Coderhouse-Ecommerce/static/js/main.3c33eeb8.js",
     "static/media/404.png": "/React-Coderhouse-Ecommerce/static/media/404.091b5d1a713e65933c51.png",
     "static/media/Mortal-Kombat-11-Ultimate-Edition-193x288.jpg": "/React-Coderhouse-Ecommerce/static/media/Mortal-Kombat-11-Ultimate-Edition-193x288.4b6cdd37b4e86c7ceba2.jpg",
     "static/media/Captain-Tsubasa-Rise-of-New-Champions.jpg": "/React-Coderhouse-Ecommerce/static/media/Captain-Tsubasa-Rise-of-New-Champions.06850a9e019d743f036e.jpg",
@@ -26,11 +26,11 @@
     "static/media/slick.ttf": "/React-Coderhouse-Ecommerce/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/React-Coderhouse-Ecommerce/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/React-Coderhouse-Ecommerce/index.html",
-    "main.fd09d6af.css.map": "/React-Coderhouse-Ecommerce/static/css/main.fd09d6af.css.map",
-    "main.ebf8d71a.js.map": "/React-Coderhouse-Ecommerce/static/js/main.ebf8d71a.js.map"
+    "main.13c0e218.css.map": "/React-Coderhouse-Ecommerce/static/css/main.13c0e218.css.map",
+    "main.3c33eeb8.js.map": "/React-Coderhouse-Ecommerce/static/js/main.3c33eeb8.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd09d6af.css",
-    "static/js/main.ebf8d71a.js"
+    "static/css/main.13c0e218.css",
+    "static/js/main.3c33eeb8.js"
   ]
 }
