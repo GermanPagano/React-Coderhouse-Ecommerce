@@ -41,9 +41,14 @@
     text-transform: uppercase;
     letter-spacing: 2px;
   }
-  .box .row span {
-    color: green;
+  .box .row .price {
+    color: rgb(20, 197, 20);
   }
+  .box .row .stock {
+    color: rgb(158, 14, 110);
+  }
+
+
   .box button {
     border: 1px solid #333;
     background-color: #ccc;
@@ -70,18 +75,48 @@
     text-transform: lowercase;
     text-align: start;
   }
+  .line-divider{
+    background-color: #383838c1;
+    height: 0.2rem;
+    width: 100%;
+    display: flex;
+  }
   .add-rest-cant{
     margin-top: 1rem;
-    display: flex;
-    justify-content: space-around;
     font-size: 18px;
     font-weight: 700;
+    border:  1px solid #383838c1;
+    border-radius: 5px;
+    padding: 1rem;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
+
+  .add-rest-cant-box1{
+    width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  }
+
+
+
   .add-rest-cant button{
-    background-color: #ccc;
-    min-width: 40px;
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-    font-size: 18px;
+  padding: 0.8rem !important;
+  border-radius: 5px !important;
+  border: 0 !important;
+}
+
+  .box-finish-pay{
+    margin-top: 1rem;
+    text-align: center;
+    border:  1px solid #383838c1;
+    padding: 1rem;
+  }
+  .box-finish-pay button{
+    margin-top: 10px;
+    padding: 0.8rem !important;
+    border-radius: 5px !important;
+    border: 0 !important;
   }

@@ -33,13 +33,14 @@ function ItemDeatailContainer() {
             <h2>{detail.title}</h2>
             <p>{detail.category}</p>
             <p>{detail.console}</p>
-            <span>$ {detail.price}</span>
+            <span className="price">$ {detail.price}</span>
+            <span className="stock">{`Stock: ${ detail.stock}`}</span>
+                      
           </div>
           <div className="box-description">
           <p>{detail.description}</p>
           </div>
-          {`stock total  ${ detail.stock}`}
-          
+          <span className="line-divider"></span>
           <ItemCount detail={detail}/>
         </div>
       </div>

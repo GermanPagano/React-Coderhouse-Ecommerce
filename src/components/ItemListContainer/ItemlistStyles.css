@@ -47,20 +47,6 @@ z-index: 2;
 }
 
 
-.btn-card{
-    margin: 5px 5px;
-}
-.btn-card:hover{
-    color: white !important;
-    background-color: #03a8f4c1  !important;
-}
-
-
-
-.btn-card:active{
-    transform:translateY(2px);
-
-}
 
 .img-item{
     max-height: 350px;
