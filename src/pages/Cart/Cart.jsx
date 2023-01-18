@@ -51,8 +51,13 @@ const handleSubstractProduct = (item) => {
               <h5>{item.title}</h5>{" "}
             </div>
             <div className="box-item ">
-              <ButtonComponent text={<GrFormAdd size={20}/>} />
-              <ButtonComponent text={<GrFormSubtract size={20}/>} />
+              <ButtonComponent 
+              handlerOnclick={ ()=> alert('estas sumando 1 ') }
+              text={<GrFormAdd size={20}/>} />
+
+              <ButtonComponent 
+              handlerOnclick={()=> alert('estas restando 1 ')}
+              text={<GrFormSubtract size={20}/>} />
             </div>
             <div className="box-item">
               <p> {`${item.quantity} x $ ${item.price}`}</p>
