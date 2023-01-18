@@ -1,4 +1,4 @@
-import React, { useState , useContext } from "react";
+import React, {  useContext } from "react";
 import { cartContext } from "../../storage/cartContext";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 import "./stylesCart.css";
