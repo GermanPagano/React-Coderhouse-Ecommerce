@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import React, { useState , useContext} from "react";
+import React, { useState , useContext } from "react";
 import brand from "../../assets/img/brand/brand.png";
 import CartWidget from "./CartWidget ";
 import Favorites from "./Favorites";
@@ -13,6 +13,8 @@ import { cartContext } from "../../storage/cartContext";
 
 function NavbarComp() {
  const context = useContext(cartContext);
+  
+
 
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -60,7 +62,7 @@ function NavbarComp() {
               <Favorites />
             </Link>
             <Link to={"/cart"} className="nav-ico-actions">
-              <CartWidget text={context.cartLength} />
+              <CartWidget text={context.cart} />
             </Link>
           </Nav>
         </Navbar.Collapse>

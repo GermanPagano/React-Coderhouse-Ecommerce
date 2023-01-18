@@ -226,12 +226,8 @@ const CatchProductsOfMock = () => {
 
 const getProduct = (idSelected) => {
   return new Promise((resolve, reject) => {
-    //verifico que el id seleccionado que pase por parametro este en idSelected
-    console.log("el id seleccionado es el " + idSelected);
     // la constante reqProd , recorre los productos y trae solo el producto.id que es igual al seleccionado
     const reqProd = products.find((item) => item.id === Number(idSelected));
-    // muestro en consola el producto elegido ( completo )
-    console.log(reqProd);
     // verifico que exista un producto guardado en reqProd y si es true , entonces resuelvo la promesa
     setTimeout(() => {
       reqProd ? resolve(reqProd) : reject("no encontrado");
@@ -253,9 +249,9 @@ const getProductCategory = (ItemConsole) => {
   const getProductByName = (ItemName) => {
   return new Promise( (resolve,reject)=>{
     ItemName = ItemName.toLowerCase()
-    console.log("el nombre a buscar en el mock " + ItemName);
+    console.log("Buscando en el mock " + ItemName);
     let reqProd = products.filter((item)=> item.title.toLowerCase() === ItemName )
-    console.log(reqProd)
+    
     setTimeout(() => {
       reqProd ? resolve(reqProd): reject('No existe ese nombre')    
     }, 500);

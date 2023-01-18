@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useContext} from "react";
 import { Link } from "react-router-dom";
 import { getProduct } from "../../services/mockService";
 import {
@@ -11,13 +11,19 @@ import {
 // import { FiHeart } from 'react-icons/fi'
 import "./ItemlistStyles.css";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
+import { cartContext } from "../../storage/cartContext";
 
 const Item = ({ Info_for_item }) => {
   const [stock, setStock] = useState(Info_for_item.stock);
+  const context = useContext(cartContext)
+  const quantity = 1;
 
+    //funcion para agregar al carrito
   const handlerAddToCart = () => {
     setStock( prevStock => prevStock -1);
+    context.AddToCart( {...Info_for_item, quantity: quantity } )
   };
+
 
 
 

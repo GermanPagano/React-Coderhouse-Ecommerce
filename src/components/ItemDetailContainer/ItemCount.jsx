@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import React, { useState , useContext } from "react";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import { GrFormAdd } from "react-icons/gr";
 import { GrFormSubtract } from "react-icons/gr";
 import "./StylesItemDetailContainer.css";
 import { Link } from "react-router-dom";
+import { cartContext } from "../../storage/cartContext";
 
 function ItemCount({ detail }) {
   // estado para guardar la cantidad del producto elegido
-  const [cantToBuy, setcantToBuy] = useState(0);
+  const [countToBuy, setcountToBuy] = useState(0);
   const [disablerAddBtn, setDisablerAddBtn] = useState(false);
   const [disablerRestBtn, setdisablerRestBtn] = useState(false);
 
   const handleAddOne = () => {
     if (detail.stock >= 1) {
-      setcantToBuy(cantToBuy + 1);
+      setcountToBuy(countToBuy + 1);
       detail.stock = detail.stock - 1;
 
       disablerRestBtn && setdisablerRestBtn(!disablerRestBtn);
@@ -22,20 +23,36 @@ function ItemCount({ detail }) {
   };
 
   const handleRestOne = () => {
-    if (cantToBuy >= 1) {
-      setcantToBuy(cantToBuy - 1);
+    if (countToBuy >= 1) {
+      setcountToBuy(countToBuy - 1);
       detail.stock = detail.stock + 1;
 
       disablerAddBtn && setDisablerAddBtn(!disablerAddBtn);
     }
-    cantToBuy === 0 && setdisablerRestBtn(!disablerRestBtn);
+    countToBuy === 0 && setdisablerRestBtn(!disablerRestBtn);
   };
 
+// agregar productos al carrito
+  const context = useContext(cartContext)
   const [RenderingButtons, setRenderingButtons] = useState(true);
 
-  const handleAddToCart = () => {
+
+  //funcion para agregar al carrito
+  const handleAddToCart = (countToBuy) => {
+    countToBuy !== 0 ? 
+    context.AddToCart( {...detail, quantity: countToBuy} ) : alert('no tenes nada para agregar')
+    countToBuy !== 0 &&
     setRenderingButtons(!RenderingButtons);
   };
+
+
+  //eliminar producto del carrito
+  const handleRestItemOfCart = (detail) => {
+    context.RemoveToCart(detail);
+    setRenderingButtons(!RenderingButtons);
+  }
+
+
 
   return (
     <div>
@@ -48,7 +65,7 @@ function ItemCount({ detail }) {
               handlerOnclick={handleRestOne}
               text={<GrFormSubtract />}
             />
-            <span>{cantToBuy}</span>
+            <span>{countToBuy}</span>
             <ButtonComponent
               onDisabler={disablerAddBtn}
               handlerOnclick={handleAddOne}
@@ -58,7 +75,7 @@ function ItemCount({ detail }) {
             <div className="add-rest-cant-box2"> 
             <ButtonComponent
               onDisabler={false}
-              handlerOnclick={() => handleAddToCart(detail)}
+              handlerOnclick={() => handleAddToCart(countToBuy)}
               text={"Add to cart"}
             />
             </div>
@@ -67,7 +84,7 @@ function ItemCount({ detail }) {
       ) : (
         <div className="box-finish-pay">
           {" "}
-          {` ${cantToBuy}x ${detail.title} was added to cart `}
+          {` ${countToBuy}x ${detail.title} was added to cart `}
           <div>
             <span>
               Complete your purchase <Link to="/"> here </Link>
@@ -76,8 +93,9 @@ function ItemCount({ detail }) {
           <div>
             <ButtonComponent 
             text={"undo"}
-            handlerOnclick={handleAddToCart}
-             />
+            handlerOnclick={handleRestItemOfCart}
+
+            />
           </div>
         </div>
       )}

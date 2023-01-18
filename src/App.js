@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
 import NavbarComp from './components/Navbar/NavbarComp';
 import { CartProvider } from "./storage/cartContext";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/item/name/:ItemName" element={<ItemListContainer/>}/>
           <Route path="/category/:ItemConsole" element={<ItemListContainer />}/>{/* ruta requerida para entrega 2 */}
           <Route path="/item/:itemid" element={<ItemDeatailContainer />} />{/* ruta requerida para entrega 2 */}
+          <Route path="*" element={<Cart/>} />
           <Route path="*" element={<PageNotFound/>} />
         </Routes>
           <Footer/>

@@ -20,13 +20,13 @@ const SearchItem = () => {
 
   useEffect(() => {
     search
-      ? getProductByName(search)
+      && getProductByName(search)
           // de ser exitosa la devolucion guardo lo recibido en el useState
           .then((response) => setProduct(response))
           // de ser erronea la respuesta mostrar el error por consola
           .catch((e) => console.log(e))
-          .then ( )
-      : console.log("no hay busquedas");
+
+      
   }, [search]);
 
   useEffect(() => {
