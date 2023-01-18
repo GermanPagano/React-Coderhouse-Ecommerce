@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState , useContext } from "react";
 import { cartContext } from "../../storage/cartContext";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 import "./stylesCart.css";
@@ -7,6 +7,7 @@ import { GrFormSubtract } from "react-icons/gr";
 import { IoTrash } from "react-icons/io5";
 
 function Cart() {
+
   const context = useContext(cartContext);
   console.log(context);
 
@@ -14,8 +15,12 @@ function Cart() {
     context.Clear()
   }
 
+
+
 const handleSubstractProduct = (item) => {
-  console.log('queres borrar ' + item.title)
+  console.log('queres borrar el  ' + item.title)
+
+  context.RemoveToCart( item )
 }
 
 
@@ -54,7 +59,7 @@ const handleSubstractProduct = (item) => {
             </div>
             <div className="box-item">
             <ButtonComponent 
-            handlerOnclick={ ()=>handleSubstractProduct(item)}
+            handlerOnclick={ ()=> handleSubstractProduct(item)}
             text={<IoTrash size={20} />} />
             </div>
           </div>

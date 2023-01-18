@@ -31,9 +31,9 @@ function CartProvider(props) {
 
 
     const RemoveToCart = (itemToRemove) => {
-      let deleteThis = cart.find(item => item.id !== itemToRemove.id)
-      
-      setCart( cart.filter( item => item.id !== deleteThis.id))
+      //let deleteThis = cart.find(item => item.id !== itemToRemove.id)
+      console.log(itemToRemove.title)
+      setCart( cart.filter( item => item.id !== itemToRemove.id) )
     }
 
 

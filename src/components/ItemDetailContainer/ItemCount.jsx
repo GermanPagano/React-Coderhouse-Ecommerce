@@ -1,4 +1,4 @@
-import React, { useState , useContext } from "react";
+import React, { useState, useContext } from "react";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import { GrFormAdd } from "react-icons/gr";
 import { GrFormSubtract } from "react-icons/gr";
@@ -32,52 +32,49 @@ function ItemCount({ detail }) {
     countToBuy === 0 && setdisablerRestBtn(!disablerRestBtn);
   };
 
-// agregar productos al carrito
-  const context = useContext(cartContext)
+  // agregar productos al carrito
+  const context = useContext(cartContext);
   const [RenderingButtons, setRenderingButtons] = useState(true);
-
 
   //funcion para agregar al carrito
   const handleAddToCart = (countToBuy) => {
-    countToBuy !== 0 ? 
-    context.AddToCart( {...detail, quantity: countToBuy} ) : alert('no tenes nada para agregar')
-    countToBuy !== 0 &&
-    setRenderingButtons(!RenderingButtons);
+    countToBuy !== 0
+      ? context.AddToCart({ ...detail, quantity: countToBuy })
+      : alert("no tenes nada para agregar");
+    countToBuy !== 0 && setRenderingButtons(!RenderingButtons);
   };
-
 
   //eliminar producto del carrito
   const handleRestItemOfCart = (detail) => {
-    context.RemoveToCart(detail);
+    console.log( detail.title)
+    context.RemoveToCart( detail );
     setRenderingButtons(!RenderingButtons);
-  }
-
-
+  };
 
   return (
     <div>
       {RenderingButtons ? (
         <>
           <div className="add-rest-cant">
-          <div className="add-rest-cant-box1"> 
-          <ButtonComponent
-              onDisabler={disablerRestBtn}
-              handlerOnclick={handleRestOne}
-              text={<GrFormSubtract />}
-            />
-            <span>{countToBuy}</span>
-            <ButtonComponent
-              onDisabler={disablerAddBtn}
-              handlerOnclick={handleAddOne}
-              text={<GrFormAdd/>}
-            /> 
+            <div className="add-rest-cant-box1">
+              <ButtonComponent
+                onDisabler={disablerRestBtn}
+                handlerOnclick={handleRestOne}
+                text={<GrFormSubtract />}
+              />
+              <span>{countToBuy}</span>
+              <ButtonComponent
+                onDisabler={disablerAddBtn}
+                handlerOnclick={handleAddOne}
+                text={<GrFormAdd />}
+              />
             </div>
-            <div className="add-rest-cant-box2"> 
-            <ButtonComponent
-              onDisabler={false}
-              handlerOnclick={() => handleAddToCart(countToBuy)}
-              text={"Add to cart"}
-            />
+            <div className="add-rest-cant-box2">
+              <ButtonComponent
+                onDisabler={false}
+                handlerOnclick={() => handleAddToCart(countToBuy)}
+                text={"Add to cart"}
+              />
             </div>
           </div>
         </>
@@ -91,10 +88,9 @@ function ItemCount({ detail }) {
             </span>
           </div>
           <div>
-            <ButtonComponent 
-            text={"undo"}
-            handlerOnclick={handleRestItemOfCart}
-
+            <ButtonComponent
+              text={"undo"}
+              handlerOnclick={()=> handleRestItemOfCart(detail)}
             />
           </div>
         </div>
