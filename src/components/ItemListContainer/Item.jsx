@@ -1,4 +1,4 @@
-import React, { useState , useContext} from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { getProduct } from "../../services/mockService";
 import {
@@ -13,19 +13,18 @@ import "./ItemlistStyles.css";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import { cartContext } from "../../storage/cartContext";
 
+
+
 const Item = ({ Info_for_item }) => {
   const [stock, setStock] = useState(Info_for_item.stock);
-  const context = useContext(cartContext)
+  const context = useContext(cartContext);
   const quantity = 1;
 
-    //funcion para agregar al carrito
+  //funcion para agregar al carrito
   const handlerAddToCart = () => {
-    setStock( prevStock => prevStock -1);
-    context.AddToCart( {...Info_for_item, quantity: quantity } )
+    setStock((prevStock) => prevStock - 1);
+    context.AddToCart({ ...Info_for_item, quantity: quantity });
   };
-
-
-
 
   return (
     <MDBCol md="12" lg="3" className="mb-4">
@@ -37,19 +36,42 @@ const Item = ({ Info_for_item }) => {
             rippleTag="div"
             className="bg-image  hover-zoom"
           >
+            <div className="mask ">
+              {Info_for_item.stock<=2&& 
+              <h4 style={{ color:'white',fontWeight:'700',paddingTop:'320px'}}>Ultimas unidades!</h4>}
+            </div>
+
             <MDBCardImage
               src={Info_for_item.imgUrl}
               fluid
               className="img-item "
             />
-            <div className="mask">
-              <div className="d-flex justify-content-start align-items-end ">
+            <div
+              className="mask"
+              style={{ display: "flex", justifyContent: "space-around" }}
+            >
+              <div className="col ">
                 <h4>
-                  <span className="badge ms-4 mt-2">
+                  <span className="badge ms-1 mt-2 text-end d-flex">
                     {Info_for_item.console}
                   </span>
                 </h4>
               </div>
+
+              {Info_for_item.discount && (
+                <div
+                  className="bg-warning d-flex p-2 "
+                  style={{
+                    maxHeight: "50px",
+                    borderRadius: "50%",
+                    maxWidth: "50px",
+                    justifyContent: "center",
+                    fontSize: "23px",
+                  }}
+                >
+                  <span className="badge pt-2">{` - ${Info_for_item.discount}%`}</span>
+                </div>
+              )}
             </div>
             <div className="hover-overlay">
               <div
@@ -61,7 +83,10 @@ const Item = ({ Info_for_item }) => {
           <MDBCardBody className="card-body">
             <h5 className="card-title mb-3 ">{Info_for_item.title}</h5>
             <p>{Info_for_item.category}</p>
-            <h6 className="item-price mb-3">$ {Info_for_item.price}</h6>
+
+            <span>
+              <h6 className="item-price mb-3"> $ {Info_for_item.price}</h6>
+            </span>
 
             {/* <button className="btn" ><FiHeart size={17} /></button> */}
             {/* <p>Available: {stock}</p> */}
@@ -69,7 +94,7 @@ const Item = ({ Info_for_item }) => {
             <ButtonComponent
               handlerOnclick={() => handlerAddToCart(Info_for_item)}
               text={"Add to cart"}
-              onDisabler={ stock === 0 }
+              onDisabler={stock === 0}
             />
 
             <Link to={`/item/${Info_for_item.id}`}>

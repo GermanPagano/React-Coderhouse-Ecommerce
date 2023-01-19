@@ -1,6 +1,6 @@
 .bg-image {
     background-color: rgb(19, 16, 16) ;
-    padding: 0.8rem;
+    padding: 0.2rem;
 }
 
 .box-behind::before{
@@ -49,5 +49,6 @@ z-index: 2;
 
 
 .img-item{
+
     max-height: 350px;
 }

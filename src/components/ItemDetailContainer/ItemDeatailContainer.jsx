@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./StylesItemDetailContainer.css";
 import ItemCount from "./ItemCount.jsx";
-
+import Spiner from "../Spiner/Spiner.jsx";
 
 function ItemDeatailContainer() {
 
@@ -12,7 +12,7 @@ function ItemDeatailContainer() {
       "https://www.zeldadungeon.net/wp-content/uploads/2013/10/error3.jpg",
     title: "No existe ese producto",
   }
-
+  const [isLoading, setisLoading] = useState(true);
   const [detail, setDetail] = useState([]);
   let params = useParams();
 
@@ -20,9 +20,21 @@ function ItemDeatailContainer() {
       getProduct(params.itemid)
     .then((resp) => setDetail(resp))
     .catch((err) => setDetail(notFound))
+    .finally(
+      ()=>setisLoading(false)
+    )
   }, [ ]);  // eslint-disable-line 
 
   return (
+<>
+{ isLoading  ?  (
+  <div className="container col-12 mt-5 d-flex  " style={{minHeight:'30vh' ,alignItems:'center' ,justifyContent:'center',textAlign:'center'}}>
+    
+    <Spiner/>
+  </div>
+  
+
+):(
     <div className="detail-container container ">
       <div className="details">
         <div className="big-img">
@@ -44,7 +56,9 @@ function ItemDeatailContainer() {
           <ItemCount detail={detail}/>
         </div>
       </div>
-    </div>
-  );
+    </div>)}
+
+
+  </>  );
 }
 export default ItemDeatailContainer;

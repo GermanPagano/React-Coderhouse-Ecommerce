@@ -38,6 +38,7 @@ const products = [
       "DEAD SPACE ES EL DEBUT DE EA DENTRO DEL GÉNERO DE LOS SURVIVAL HORROR. DURANTE EL JUEGO ASUMIREMOS EL CONTROL DE ISAAC CLARKE, UN INGENIERO DE ESTRUCTURAS ESPACIALES ENVUELTO EN UNA ANGUSTIOSA AVENTURA, CUANDO SU COMPAÑÍA RECIBE UNA MISTERIOSA LLAMADA DE SOCORRO DE UNA NAVE ESPACIAL PERDIDA.",
     price: 618.42,
     stock: 9,
+    discount: 50,
   },
   {
     id: 3,
@@ -60,6 +61,7 @@ const products = [
       "Forza Horizon 5 es un juego de simulación de carreras ¡Tu aventura definitiva en Horizon te espera! Explora paisajes dinámicos y en constante evolución del mundo abierto de México con una acción de conducción ilimitada y divertida en cientos de los mejores coches del mundo. Esta es tu aventura Horizon Lidera impresionantes expediciones a través de los paisajes dinámicos y en constante evolución del mundo abierto de México con una acción de conducción ilimitada y divertida en cientos de los mejores coches del mundo.",
     price: 656.25,
     stock: 10,
+    discount: 20,
   },
   {
     id: 5,
@@ -71,6 +73,7 @@ const products = [
       "Luego de los eventos de Marvel's Spider-Man Remasterizado, el adolescente Miles Morales intenta adaptarse a la vida en su nuevo hogar intentando seguir los pasos de su mentor, Peter Parker, como el nuevo Spider-Man. Pero cuando una terrible lucha de poder amenaza con destruir su hogar, el aspirante a héroe comprende que un gran poder conlleva una gran responsabilidad. Para lograr salvar la ciudad de Nueva York de Marvel, Miles deberá cargar con la responsabilidad de ser Spider-Man.",
     price: 656.25,
     stock: 10,
+    discount: 5,
   },
   {
     id: 6,
@@ -92,7 +95,7 @@ const products = [
     description:
       "Primera parte de la saga Mafia. Lost Heaven, Illinois. Años 30. Prospera como gánster durante la Ley Seca en esta reinvención del clásico. Un encontronazo con la mafia introduce al taxista Tommy Angelo en los peligrosos bajos fondos. A pesar de su reticencia inicial, Tommy no tarda en descubrir que las ventajas de unirse a la familia Salieri son demasiadas como para dejarlas pasar.",
     price: 656.25,
-    stock: 10,
+    stock: 2,
   },
   {
     id: 8,
@@ -126,6 +129,7 @@ const products = [
       "Captain Tsubasa: Rise of New Champions es un juego de fútbol de novedoso, pero con la acción trepidante y los tiros imposibles de siempre. Crea personajes con nuevas aptitudes y habilidades y usa tu «dream team» en partidos sin conexión y en red. Compite con amigos en partidos sin conexión de hasta 4 jugadores. Revive momentos del anime o forma parte del mundo de Captain Tsubasa.",
     price: 656.25,
     stock: 10,
+    discount: 80,
   },
   {
     id: 11,
@@ -136,7 +140,7 @@ const products = [
     description:
       "En Uncharted 4 Legacy of Thieves Collection busca tu fortuna y deja tu marca en el mapa en UNCHARTED: Colección Legado de ladrones. Descubre la emocionante narrativa de estilo cinematográfico y las exitosas y más importantes escenas de acción de la franquicia UNCHARTED, repletas de la astucia, el ingenio y los mejores momentos de los queridos ladrones, Nathan Drake y Chloe Frazer.",
     price: 656.25,
-    stock: 10,
+    stock: 1,
   },
   {
     id: 12,
