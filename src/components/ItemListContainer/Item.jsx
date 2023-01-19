@@ -64,7 +64,7 @@ const Item = ({ Info_for_item }) => {
             <h6 className="item-price mb-3">$ {Info_for_item.price}</h6>
 
             {/* <button className="btn" ><FiHeart size={17} /></button> */}
-            <p>Available: {stock}</p>
+            {/* <p>Available: {stock}</p> */}
 
             <ButtonComponent
               handlerOnclick={() => handlerAddToCart(Info_for_item)}

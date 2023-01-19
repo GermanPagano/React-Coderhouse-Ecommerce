@@ -13,11 +13,6 @@ function CartProvider(props) {
     const test = () => { console.log('test')}
 
     const AddToCart = (itemToAdd) => {
-        // forma en 3 pasos de copiar y añadir un elemento al array.
-        // let newCart = [...cart]
-        // newCart.push(itemToAdd)
-        // setCart(newCart)
-        //
         // verifico que el item añadido exista o no en cart, y si existe le añado 1
         const existItem= cart.find( item => item.id === itemToAdd.id );
         existItem ? (

@@ -38,9 +38,15 @@ function ItemCount({ detail }) {
 
   //funcion para agregar al carrito
   const handleAddToCart = (countToBuy) => {
-    countToBuy !== 0
-      ? context.AddToCart({ ...detail, quantity: countToBuy })
-      : alert("no tenes nada para agregar");
+    if( countToBuy !==0){ 
+      context.AddToCart({ ...detail, quantity: countToBuy  })
+    }else{
+      alert("no tenes nada para agregar");
+    }
+
+    // countToBuy !== 0
+    //   ? context.AddToCart({ ...detail, quantity: countToBuy  })
+    //   : alert("no tenes nada para agregar");
     countToBuy !== 0 && setRenderingButtons(!RenderingButtons);
   };
 

@@ -1,4 +1,4 @@
-import React, {  useContext } from "react";
+import React, { useContext , useState } from "react";
 import { cartContext } from "../../storage/cartContext";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 import "./stylesCart.css";
@@ -9,20 +9,28 @@ import { IoTrash } from "react-icons/io5";
 function Cart() {
 
   const context = useContext(cartContext);
-  console.log(context);
 
   const handleClearCart = () => {
     context.Clear()
   }
-
-
-
 const handleSubstractProduct = (item) => {
   console.log('queres borrar el  ' + item.title)
 
   context.RemoveToCart( item )
 }
+  
 
+// tengo que mejorar esta logica.///////////////////// 
+const [stock, setStock] = useState(context.cart.length);
+const handleAddOne = (item) => {
+  setStock( stock + 1);
+  context.AddToCart( {...item, quantity: 1 } )
+}
+const handleRestOne =(item) => {
+  setStock( stock - 1);
+  context.AddToCart( {...item, quantity: -1 } )
+}
+//////////////////////////////
 
   return (
     <div className="container cart-page-container col-12 justify-content-center p-3">
@@ -52,17 +60,17 @@ const handleSubstractProduct = (item) => {
             </div>
             <div className="box-item ">
               <ButtonComponent 
-              handlerOnclick={ ()=> alert('estas sumando 1 ') }
+              handlerOnclick={ () => handleAddOne(item) }
               text={<GrFormAdd size={20}/>} />
 
               <ButtonComponent 
-              handlerOnclick={()=> alert('estas restando 1 ')}
+              handlerOnclick={()=> handleRestOne(item) }
               text={<GrFormSubtract size={20}/>} />
             </div>
-            <div className="box-item">
+            <div className="box-item" >
               <p> {`${item.quantity} x $ ${item.price}`}</p>
             </div>
-            <div className="box-item">
+            <div className="box-item" style={{justifyContent:'center', display:'flex'}}>
             <ButtonComponent 
             handlerOnclick={ ()=> handleSubstractProduct(item)}
             text={<IoTrash size={20} />} />
