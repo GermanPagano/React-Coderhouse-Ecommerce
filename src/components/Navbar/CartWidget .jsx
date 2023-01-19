@@ -1,4 +1,4 @@
-import React , {  useContext } from "react";
+import React , {   useContext  } from "react";
 import { FiShoppingCart } from "react-icons/fi";
 import { MDBBadge } from "mdb-react-ui-kit";
 import { cartContext } from "../../storage/cartContext";
@@ -9,12 +9,11 @@ const CartWidget = (props) => {
   return (
     <div className="justify-content-center">
       <FiShoppingCart className="m-2" size={20}></FiShoppingCart>
-
       <MDBBadge
         pill
         color="danger"
         className="badge rounded-pill badge-notification bg-danger flex-end "
-      >{ context.cart.length !== 0 && (context.cart.length ) }</MDBBadge>
+      >{ context.cart.length !== 0 && (  context.cart.length  ) }</MDBBadge>
     </div>
   );
 };
