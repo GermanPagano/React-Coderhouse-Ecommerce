@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import "./ItemlistStyles.css";
 import { MDBContainer, MDBRow } from "mdb-react-ui-kit";
-import CatchProductsOfMock, {getProductCategory,} from "../../services/mockService";
+import { getProductByConsole } from "../../services/firebase";
+import { CatchProducts } from "../../services/firebase";
+
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import Spiner from "../Spiner/Spiner";
@@ -18,7 +20,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     ItemConsole
       ? //llamo a a funcion
-        getProductCategory(ItemConsole)
+      getProductByConsole(ItemConsole)
           // de ser exitosa la devolucion guardo lo recibido en el useState
           .then((response) => setProduct(response))
           // de ser erronea la respuesta mostrar el error por consola
@@ -27,7 +29,7 @@ const ItemListContainer = () => {
             ()=>setisLoading(false)
           )
       : //llamo a a funcion
-        CatchProductsOfMock()
+      CatchProducts()
           // de ser exitosa la devolucion guardo lo recibido en el useState
           .then((response) => setProduct(response))
           // de ser erronea la respuesta mostrar el error por consola

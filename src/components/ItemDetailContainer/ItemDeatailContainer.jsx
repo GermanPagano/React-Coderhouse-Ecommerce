@@ -1,4 +1,4 @@
-import { getProduct } from "../../services/mockService.js";
+import { getProduct } from "../../services/firebase";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./StylesItemDetailContainer.css";

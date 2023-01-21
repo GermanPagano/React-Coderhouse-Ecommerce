@@ -212,13 +212,10 @@ const products = [
 
 const CatchProductsOfMock = () => {
   return (
-    // promesa que intentara devolvernos los productos de la base de datos , en este caso el mock
     new Promise((resolve) => {
-      // el setTime emula la demora de la respuesta del Servidor
       setTimeout(() => {
-        //el setTime tiene como return la respuesta con los productos del Json
         resolve(products);
-        //mje que me avisa que la devolucion esta siendo exitosa
+
         console.log(
           "%c Devolviendo los productos de forma exitosa ",
           "background-color: green"
@@ -263,5 +260,5 @@ const getProductCategory = (ItemConsole) => {
 } 
 
 
-export { getProduct, getProductCategory , getProductByName  };
+export  { getProduct, getProductCategory , getProductByName  };
 export default CatchProductsOfMock;

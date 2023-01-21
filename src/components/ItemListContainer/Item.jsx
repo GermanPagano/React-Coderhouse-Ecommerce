@@ -27,7 +27,7 @@ const Item = ({ Info_for_item }) => {
   };
 
   return (
-    <MDBCol md="12" lg="3" className="mb-4">
+    <MDBCol md="12" lg="3" className="mb-4 item-card ">
       <MDBCard className="box-behind">
         <b></b>
         <div className="content">

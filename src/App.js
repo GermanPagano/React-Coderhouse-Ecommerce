@@ -10,10 +10,12 @@ import Footer from "./components/Footer/Footer";
 import NavbarComp from './components/Navbar/NavbarComp';
 import { CartProvider } from "./storage/cartContext";
 import Cart from "./pages/Cart/Cart";
+import { CatchProducts } from "./services/firebase";
 
 function App() {
+  CatchProducts()
 
-  return (
+  return ( 
  
 <div className="App">
     <CartProvider> 

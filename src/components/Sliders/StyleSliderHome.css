@@ -17,3 +17,8 @@
     border-radius: 5px;
     padding: 0;
 }
+
+.box-slider-home:hover {
+    transform: translateY(5px);
+}
+
