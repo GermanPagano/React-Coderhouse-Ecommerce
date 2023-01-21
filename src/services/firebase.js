@@ -51,7 +51,19 @@ export async function getProductByConsole(ItemConsole){
   console.log(products)
   return products
   }
-
+  
+// funcion para buscar productos por el input  
+export async function getProductByName(ItemName){
+  const productsRef = collection(dataBase, 'products');
+  const q  = query( productsRef , where( "title" , "==" , ItemName ) )
+  const snapshot = await getDocs(q)
+  const products = snapshot.docs.map((elem) =>{
+    let product = elem.data();
+    product.id = elem.id;
+    return product
+  })
+  return products
+}
 
 
 export default dataBase;

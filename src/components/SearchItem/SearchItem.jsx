@@ -1,7 +1,7 @@
 import "./SearchItem.css";
 import { MDBInputGroup } from "mdb-react-ui-kit";
 import { useState, useEffect } from "react";
-import { getProductByName } from "../../services/mockService";
+import { getProductByName } from "../../services/firebase";
 import ItemList from "../ItemListContainer/ItemList";
 import { useLocation } from "react-router-dom";
 

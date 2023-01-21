@@ -39,17 +39,10 @@ const ItemListContainer = () => {
           )
   }, [ItemConsole]);
 
-
-
-
-
-
   return (
     <MDBContainer fluid className=" container my-5 text-center ">
     <MDBRow>
     { isLoading ? ( <div className="container col-12 mt-5 d-flex  " style={{minHeight:'30vh' ,alignItems:'center' ,justifyContent:'center',textAlign:'center'}}><Spiner></Spiner></div>):(<ItemList products={products}/> )}
-
-
 
       </MDBRow>
 
@@ -57,3 +50,4 @@ const ItemListContainer = () => {
   );
 };
 export default ItemListContainer;
+
