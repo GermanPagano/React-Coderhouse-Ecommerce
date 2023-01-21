@@ -39,12 +39,6 @@
     
 }
 
-.cart-page-body .btn-clear{
-    display: flex;
-    justify-content: end;
-    height: auto;
-
-}
 
 @media only screen and (max-width: 600px) {
     .box-item{
