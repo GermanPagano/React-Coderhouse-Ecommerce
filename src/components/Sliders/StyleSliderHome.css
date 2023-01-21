@@ -1,12 +1,12 @@
 .slider-Home-Container{
-    padding: 1rem;
+    padding: 0.2rem;
 }
 .slider{
     border-radius: 5px;
 }
 .slider div {
     display: flex;
-    padding: 1rem;
+    padding: 0.3rem;
 }
 .box-slider-home {
     background-color: #000;

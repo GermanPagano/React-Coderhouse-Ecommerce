@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "./StyleSliderHome.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import CatchProductsOfMock from "../../services/mockService";
 import { CatchProducts } from "../../services/firebase";
 
 const SliderHome = () => {
