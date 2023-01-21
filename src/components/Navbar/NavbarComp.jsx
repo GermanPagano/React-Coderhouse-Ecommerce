@@ -5,7 +5,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import React, { useState , useContext } from "react";
 import brand from "../../assets/img/brand/brand.png";
 import CartWidget from "./CartWidget ";
-import Favorites from "./Favorites";
 import "./NavStyles.css";
 import { Link } from "react-router-dom";
 import { FiAlignJustify } from "react-icons/fi";
@@ -35,10 +34,11 @@ function NavbarComp() {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav" in={isOpen}>
           <Nav className="me-auto nav-link">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+          </Nav>
 
-            <NavDropdown
+          <Nav className="nav-link ">
+          <Link to="/">Home</Link>
+          <NavDropdown
               className="drop-Container"
               title="Categories"
               id="collasible-nav-dropdown"
@@ -55,12 +55,7 @@ function NavbarComp() {
                 XBOX
               </Link>
             </NavDropdown>
-          </Nav>
-
-          <Nav className="nav-link">
-            <Link to="/favourites" className="nav-ico-actions">
-              <Favorites />
-            </Link>
+            <Link to="/about">About</Link>
             <Link to={"/cart"} className="nav-ico-actions">
               <CartWidget text={context.cart} />
             </Link>

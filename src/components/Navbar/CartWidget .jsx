@@ -8,7 +8,7 @@ const CartWidget = (props) => {
 
   return (
     <div className="justify-content-center">
-      <FiShoppingCart className="m-2" size={20}></FiShoppingCart>
+      <FiShoppingCart className="" size={18}></FiShoppingCart>
       <MDBBadge
         pill
         color="danger"

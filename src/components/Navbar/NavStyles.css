@@ -26,20 +26,20 @@
     font-size: 1rem;
     font-weight: 500;
     padding: 10px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    text-align: center;
 }
 
 .drop-Container {
     background-color: transparent !important;
+
 }
 
 .drop-item {
     background-color: rgb(19, 16, 16) !important;
     font-weight: 500 !important;
     width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link a:hover {
