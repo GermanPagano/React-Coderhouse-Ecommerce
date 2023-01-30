@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Coderhouse-Ecommerce/static/css/main.51e68923.css",
-    "main.js": "/React-Coderhouse-Ecommerce/static/js/main.be16ed08.js",
+    "main.js": "/React-Coderhouse-Ecommerce/static/js/main.73a709e5.js",
     "static/media/404.png": "/React-Coderhouse-Ecommerce/static/media/404.091b5d1a713e65933c51.png",
     "static/media/brand.png": "/React-Coderhouse-Ecommerce/static/media/brand.e7ca8b87d98485ff34e9.png",
     "static/media/slick.svg": "/React-Coderhouse-Ecommerce/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,10 +10,10 @@
     "static/media/slick.woff": "/React-Coderhouse-Ecommerce/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/React-Coderhouse-Ecommerce/index.html",
     "main.51e68923.css.map": "/React-Coderhouse-Ecommerce/static/css/main.51e68923.css.map",
-    "main.be16ed08.js.map": "/React-Coderhouse-Ecommerce/static/js/main.be16ed08.js.map"
+    "main.73a709e5.js.map": "/React-Coderhouse-Ecommerce/static/js/main.73a709e5.js.map"
   },
   "entrypoints": [
     "static/css/main.51e68923.css",
-    "static/js/main.be16ed08.js"
+    "static/js/main.73a709e5.js"
   ]
 }
