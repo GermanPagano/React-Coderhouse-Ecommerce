@@ -1,36 +1,19 @@
 {
   "files": {
-    "main.css": "/React-Coderhouse-Ecommerce/static/css/main.809e7630.css",
-    "main.js": "/React-Coderhouse-Ecommerce/static/js/main.17756808.js",
+    "main.css": "/React-Coderhouse-Ecommerce/static/css/main.51e68923.css",
+    "main.js": "/React-Coderhouse-Ecommerce/static/js/main.be16ed08.js",
     "static/media/404.png": "/React-Coderhouse-Ecommerce/static/media/404.091b5d1a713e65933c51.png",
-    "static/media/Mortal-Kombat-11-Ultimate-Edition-193x288.jpg": "/React-Coderhouse-Ecommerce/static/media/Mortal-Kombat-11-Ultimate-Edition-193x288.4b6cdd37b4e86c7ceba2.jpg",
-    "static/media/Captain-Tsubasa-Rise-of-New-Champions.jpg": "/React-Coderhouse-Ecommerce/static/media/Captain-Tsubasa-Rise-of-New-Champions.06850a9e019d743f036e.jpg",
-    "static/media/Nickelodeon-Kart-Racers-3-Slime-Speedway.jpg": "/React-Coderhouse-Ecommerce/static/media/Nickelodeon-Kart-Racers-3-Slime-Speedway.0dbb6f658e1430016778.jpg",
-    "static/media/eFootball-PES-2021.jpg": "/React-Coderhouse-Ecommerce/static/media/eFootball-PES-2021.385a2418096bedbfa9da.jpg",
-    "static/media/Forza-Horizon-5-Premium-Edition.jpg": "/React-Coderhouse-Ecommerce/static/media/Forza-Horizon-5-Premium-Edition.5100b09c35b02e4dd5c8.jpg",
-    "static/media/God-of-War.jpg": "/React-Coderhouse-Ecommerce/static/media/God-of-War.ee2ebf8cb212e0b6b36e.jpg",
-    "static/media/football-manager-2021-1.jpg": "/React-Coderhouse-Ecommerce/static/media/football-manager-2021-1.33b0e8a6b35a9e9614f3.jpg",
-    "static/media/Red-Dead-Redemption-2.jpg": "/React-Coderhouse-Ecommerce/static/media/Red-Dead-Redemption-2.fddb252e6917334c545e.jpg",
-    "static/media/Scorn-Deluxe-Edition.jpg": "/React-Coderhouse-Ecommerce/static/media/Scorn-Deluxe-Edition.4ca5fe71f534233a8f81.jpg",
-    "static/media/Assassins-Creed-Valhalla.jpg": "/React-Coderhouse-Ecommerce/static/media/Assassins-Creed-Valhalla.f3a6675cfcc8364f5b75.jpg",
-    "static/media/Uncharted-4-Legacy-of-Thieves-Collection.jpg": "/React-Coderhouse-Ecommerce/static/media/Uncharted-4-Legacy-of-Thieves-Collection.4f320f426299fb87ac8a.jpg",
-    "static/media/Mafia-Edicion-Definitiva.jpg": "/React-Coderhouse-Ecommerce/static/media/Mafia-Edicion-Definitiva.b89feb3fbff5e73260a2.jpg",
-    "static/media/Cyberpunk-2077.jpg": "/React-Coderhouse-Ecommerce/static/media/Cyberpunk-2077.96d5cabeaa519a7f811c.jpg",
-    "static/media/Marvels-SpiderMan-Miles-Morales.jpg": "/React-Coderhouse-Ecommerce/static/media/Marvels-SpiderMan-Miles-Morales.a059b565de0839378a1c.jpg",
-    "static/media/Cartel-Tycoon.jpg": "/React-Coderhouse-Ecommerce/static/media/Cartel-Tycoon.60e3a5864c6ee890eef7.jpg",
-    "static/media/dead-space-2613-poster.jpg": "/React-Coderhouse-Ecommerce/static/media/dead-space-2613-poster.1fca191a0368551a6428.jpg",
-    "static/media/Alan-Wake-Remastered.jpg": "/React-Coderhouse-Ecommerce/static/media/Alan-Wake-Remastered.9f720c9ec3ba57148b34.jpg",
     "static/media/brand.png": "/React-Coderhouse-Ecommerce/static/media/brand.e7ca8b87d98485ff34e9.png",
     "static/media/slick.svg": "/React-Coderhouse-Ecommerce/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/React-Coderhouse-Ecommerce/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/React-Coderhouse-Ecommerce/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/React-Coderhouse-Ecommerce/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/React-Coderhouse-Ecommerce/index.html",
-    "main.809e7630.css.map": "/React-Coderhouse-Ecommerce/static/css/main.809e7630.css.map",
-    "main.17756808.js.map": "/React-Coderhouse-Ecommerce/static/js/main.17756808.js.map"
+    "main.51e68923.css.map": "/React-Coderhouse-Ecommerce/static/css/main.51e68923.css.map",
+    "main.be16ed08.js.map": "/React-Coderhouse-Ecommerce/static/js/main.be16ed08.js.map"
   },
   "entrypoints": [
-    "static/css/main.809e7630.css",
-    "static/js/main.17756808.js"
+    "static/css/main.51e68923.css",
+    "static/js/main.be16ed08.js"
   ]
 }
