@@ -56,8 +56,8 @@ function Cart() {
     createOrder(order).then((id) => {
       // aca va el sweet alert
       Swal.fire({
-        title: `🐱‍🏍Thank you ${order.buyer.name} `,
-        text:  `your tracking code is:  ${id} `,
+        title: `Thank you ${order.buyer.name} `,
+        text:  `your tracking code is: ${id} `,
         icon: 'success',
         confirmButtonText: 'Bye',
         timer: 5000 ,
