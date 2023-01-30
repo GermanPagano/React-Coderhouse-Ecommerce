@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import "./StylesItemDetailContainer.css";
 import ItemCount from "./ItemCount.jsx";
 import Spiner from "../Spiner/Spiner.jsx";
+import { Link } from "react-router-dom";
+
 
 function ItemDeatailContainer() {
 
@@ -55,6 +57,11 @@ function ItemDeatailContainer() {
           <span className="line-divider"></span>
           <ItemCount detail={detail}/>
         </div>
+      </div>
+      <div className="col text-center">
+      <Link to="/">
+                <p text="Back to Home">  {'>>> To home'}</p>
+        </Link>
       </div>
     </div>)}
 

@@ -1,5 +1,6 @@
 .slider-Home-Container{
-    padding: 0.2rem;
+    padding: 1rem;
+    color: rgb(104, 104, 104);
 }
 .slider{
     border-radius: 5px;
@@ -11,11 +12,12 @@
 .box-slider-home {
     background-color: #000;
     border-radius: 20px;
+    max-width: 200px;
 }
 .box-slider-home img {
     max-width: 100%;
-    border-radius: 5px;
-    padding: 0;
+    padding: 0.1rem ;
+    border-radius: 20px;
 }
 
 .box-slider-home:hover {

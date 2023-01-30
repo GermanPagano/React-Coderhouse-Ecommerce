@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { getProduct } from "../../services/mockService";
+import { getProduct } from "../../services/firebase";
 import {
   MDBCol,
   MDBCard,
@@ -12,8 +12,7 @@ import {
 import "./ItemlistStyles.css";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import { cartContext } from "../../storage/cartContext";
-
-
+import { toast } from "react-toastify";
 
 const Item = ({ Info_for_item }) => {
   const [stock, setStock] = useState(Info_for_item.stock);
@@ -24,6 +23,18 @@ const Item = ({ Info_for_item }) => {
   const handlerAddToCart = () => {
     setStock((prevStock) => prevStock - 1);
     context.AddToCart({ ...Info_for_item, quantity: quantity });
+
+
+    toast.success(` ${Info_for_item.title}`, {
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+    });
   };
 
   return (
@@ -37,8 +48,17 @@ const Item = ({ Info_for_item }) => {
             className="bg-image  hover-zoom"
           >
             <div className="mask ">
-              {Info_for_item.stock<=2&& 
-              <h4 style={{ color:'white',fontWeight:'700',paddingTop:'320px'}}>Ultimas unidades!</h4>}
+              {Info_for_item.stock <= 2 && (
+                <h4
+                  style={{
+                    color: "white",
+                    fontWeight: "700",
+                    paddingTop: "320px",
+                  }}
+                >
+                  Ultimas unidades!
+                </h4>
+              )}
             </div>
 
             <MDBCardImage
@@ -96,6 +116,8 @@ const Item = ({ Info_for_item }) => {
               text={"Add to cart"}
               onDisabler={stock === 0}
             />
+
+
 
             <Link to={`/item/${Info_for_item.id}`}>
               <ButtonComponent

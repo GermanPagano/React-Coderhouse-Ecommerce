@@ -4,6 +4,7 @@ import "./StyleSliderHome.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { CatchProducts } from "../../services/firebase";
+import { Link } from "react-router-dom";
 
 const SliderHome = () => {
   const [products, setProduct] = useState([]);
@@ -51,12 +52,19 @@ const SliderHome = () => {
       },
     ],
   };
+
+
   return (
-    <div className="slider-Home-Container">
+    <div className="slider-Home-Container  mt-3">
+      <h5>👽 Latest added</h5>
       <Slider {...settings} autoplay className="slider">
         {products.map((item) => (
           <div key={item.id} className="box-slider-home ">
-            <img src={item.imgUrl} alt={item.title} />
+
+          <Link to={`/item/${item.id}`}>
+            <img src={item.imgUrl} alt={item.title}
+            />
+          </Link>
           </div>
         ))}
       </Slider>

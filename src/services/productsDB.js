@@ -1,25 +1,8 @@
-import RDR2 from "../assets/img/games-img/principal/Red-Dead-Redemption-2.jpg";
-import DeadSpace from "../assets/img/games-img/principal/dead-space-2613-poster.jpg";
-import AssasinsValhalla from "../assets/img/games-img/principal/Assassins-Creed-Valhalla.jpg";
-import ForzaHorizon5 from "../assets/img/games-img/principal/Forza-Horizon-5-Premium-Edition.jpg";
-import SpiderMan from "../assets/img/games-img/principal/Marvels-SpiderMan-Miles-Morales.jpg";
-import AlanWake from "../assets/img/games-img/principal/Alan-Wake-Remastered.jpg";
-import Mafia from "../assets/img/games-img/principal/Mafia-Edicion-Definitiva.jpg";
-import CyberPunk from "../assets/img/games-img/principal/Cyberpunk-2077.jpg";
-import Mk11 from "../assets/img/games-img/principal/Mortal-Kombat-11-Ultimate-Edition-193x288.jpg";
-import Tsubasa from "../assets/img/games-img/principal/Captain-Tsubasa-Rise-of-New-Champions.jpg";
-import Uncharted from "../assets/img/games-img/principal/Uncharted-4-Legacy-of-Thieves-Collection.jpg";
-import KartTracers from "../assets/img/games-img/principal/Nickelodeon-Kart-Racers-3-Slime-Speedway.jpg";
-import GodOfWar from "../assets/img/games-img/principal/God-of-War.jpg";
-import Scorn from "../assets/img/games-img/principal/Scorn-Deluxe-Edition.jpg";
-import FootballManager from "../assets/img/games-img/principal/football-manager-2021-1.jpg";
-import PES21 from "../assets/img/games-img/principal/eFootball-PES-2021.jpg";
-import CartelTycoon from "../assets/img/games-img/principal/Cartel-Tycoon.jpg";
 
-const products = [
+export const products = [
   {
     id: 1,
-    imgUrl: RDR2,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2020/10/Red-Dead-Redemption-2.jpg',
     console: "PC",
     title: "Red Dead Redemption II",
     category: "Accion | Aventura ",
@@ -30,7 +13,7 @@ const products = [
   },
   {
     id: 2,
-    imgUrl: DeadSpace,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2020/05/dead-space-2613-poster.jpg',
     console: "PC",
     title: "Dead Space",
     category: "Shooter | Supervivencia | Terror",
@@ -42,7 +25,7 @@ const products = [
   },
   {
     id: 3,
-    imgUrl: AssasinsValhalla,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2021/03/Assassins-Creed-Valhalla.jpg',
     console: "PC",
     title: "Assasins Creed Valhalla",
     category: "Action | Rol ",
@@ -53,7 +36,7 @@ const products = [
   },
   {
     id: 4,
-    imgUrl: ForzaHorizon5,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2021/11/Forza-Horizon-5-Premium-Edition.jpg',
     console: "PS4",
     title: "Forza Horizon V",
     category: "Carrera",
@@ -65,9 +48,9 @@ const products = [
   },
   {
     id: 5,
-    imgUrl: SpiderMan,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2022/11/Marvels-SpiderMan-Miles-Morales.jpg',
     console: "PS4",
-    title: "Spiderman Miles Morales",
+    title: "Spiderman",
     category: "Accion | Lucha ",
     description:
       "Luego de los eventos de Marvel's Spider-Man Remasterizado, el adolescente Miles Morales intenta adaptarse a la vida en su nuevo hogar intentando seguir los pasos de su mentor, Peter Parker, como el nuevo Spider-Man. Pero cuando una terrible lucha de poder amenaza con destruir su hogar, el aspirante a héroe comprende que un gran poder conlleva una gran responsabilidad. Para lograr salvar la ciudad de Nueva York de Marvel, Miles deberá cargar con la responsabilidad de ser Spider-Man.",
@@ -77,7 +60,7 @@ const products = [
   },
   {
     id: 6,
-    imgUrl: AlanWake,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2020/05/alan-wake-complete-collection-9953-poster.jpg',
     console: "PS4",
     title: "Alan Wake Remastered",
     category: "Accion | Terror",
@@ -88,7 +71,7 @@ const products = [
   },
   {
     id: 7,
-    imgUrl: Mafia,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2020/10/Mafia-Edicion-Definitiva.jpg',
     console: "PS4",
     title: "Mafia",
     category: "Aventura",
@@ -99,7 +82,7 @@ const products = [
   },
   {
     id: 8,
-    imgUrl: CyberPunk,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2020/12/Cyberpunk-2077.jpg',
     console: "XBOX",
     title: "CyberPunk 2077",
     category: "Accion | rol ",
@@ -110,7 +93,7 @@ const products = [
   },
   {
     id: 9,
-    imgUrl: Mk11,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2020/10/Mortal-Kombat-11-Ultimate-Edition.jpg',
     console: "XBOX",
     title: "Mortal Kombat 11",
     category: "Accion | lucha ",
@@ -121,7 +104,7 @@ const products = [
   },
   {
     id: 10,
-    imgUrl: Tsubasa,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2020/08/Captain-Tsubasa-Rise-of-New-Champions.jpg',
     console: "PS4",
     title: "Captain Tsubasa",
     category: "Accion | anime ",
@@ -133,7 +116,7 @@ const products = [
   },
   {
     id: 11,
-    imgUrl: Uncharted,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2022/10/Uncharted-4-Legacy-of-Thieves-Collection.jpg',
     console: "PC",
     title: "Uncharted 4",
     category: "Accion | rol ",
@@ -144,7 +127,7 @@ const products = [
   },
   {
     id: 12,
-    imgUrl: KartTracers,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2020/12/Nickelodeon-Kart-Racers-2-Grand-Prix.jpg',
     console: "XBOX",
     title: "Nickelodeon Kart Racers 3",
     category: "Carrera | Multijugador ",
@@ -155,7 +138,7 @@ const products = [
   },
   {
     id: 13,
-    imgUrl: GodOfWar,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2022/01/God-of-War.jpg',
     console: "PS4",
     title: "God Of War",
     category: "Accion | aventura ",
@@ -166,7 +149,7 @@ const products = [
   },
   {
     id: 14,
-    imgUrl: Scorn,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2022/10/Scorn-Deluxe-Edition.jpg',
     console: "XBOX",
     title: "Scorn Deluxe Edition",
     category: "Aventura | terror ",
@@ -177,7 +160,7 @@ const products = [
   },
   {
     id: 15,
-    imgUrl: FootballManager,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2021/08/football-manager-2021-1.jpg',
     console: "PC",
     title: "Football Manager 2021",
     category: "Deportes",
@@ -188,7 +171,7 @@ const products = [
   },
   {
     id: 16,
-    imgUrl: PES21,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2020/10/eFootball-PES-2021.jpg',
     console: "PC",
     title: "eFootball PES 2021",
     category: "Deportes ",
@@ -199,7 +182,7 @@ const products = [
   },
   {
     id: 17,
-    imgUrl: CartelTycoon,
+    imgUrl: 'https://gamesfull.app/almacenamiento/2022/07/Cartel-Tycoon.jpg',
     console: "XBOX",
     title: "Cartel Tycoon",
     category: "Accion || estrategia ",
@@ -210,55 +193,4 @@ const products = [
   }
 ];
 
-const CatchProductsOfMock = () => {
-  return (
-    new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(products);
 
-        console.log(
-          "%c Devolviendo los productos de forma exitosa ",
-          "background-color: green"
-        );
-      }, 2000);
-    })
-  );
-};
-
-const getProduct = (idSelected) => {
-  return new Promise((resolve, reject) => {
-    // la constante reqProd , recorre los productos y trae solo el producto.id que es igual al seleccionado
-    const reqProd = products.find((item) => item.id === Number(idSelected));
-    // verifico que exista un producto guardado en reqProd y si es true , entonces resuelvo la promesa
-    setTimeout(() => {
-      reqProd ? resolve(reqProd) : reject("no encontrado");
-    }, 1000);
-  });
-};
-
-const getProductCategory = (ItemConsole) => {
-  return new Promise((resolve, reject) => {
-    let reqProd = products.filter(item => item.console === ItemConsole);
-    setTimeout(() => {
-      reqProd ? resolve(reqProd) : reject("La categoria no existe");
-    }, 1000);
-  })
-}
-
-
-// funcion para buscar productos por el input
-  const getProductByName = (ItemName) => {
-  return new Promise( (resolve,reject)=>{
-    ItemName = ItemName.toLowerCase()
-    console.log("Buscando en el mock " + ItemName);
-    let reqProd = products.filter((item)=> item.title.toLowerCase() === ItemName )
-    
-    setTimeout(() => {
-      reqProd ? resolve(reqProd): reject('No existe ese nombre')    
-    }, 500);
-  })
-} 
-
-
-export  { getProduct, getProductCategory , getProductByName  };
-export default CatchProductsOfMock;

@@ -6,9 +6,14 @@ import { GrFormAdd } from "react-icons/gr";
 import { GrFormSubtract } from "react-icons/gr";
 import { IoTrash } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { createOrder } from "../../services/firebase";
+import { useNavigate } from "react-router-dom";
+import Modal from "../../components/Modal/Modal";
+import Swal from 'sweetalert2'
 
 function Cart() {
   const context = useContext(cartContext);
+  const Navigate = useNavigate();
 
   const handleClearCart = () => {
     context.Clear();
@@ -17,7 +22,6 @@ function Cart() {
     context.RemoveToCart(item);
   };
 
-  // tengo que mejorar esta logica./////////////////////
   const [stock, setStock] = useState(context.cart.length);
   const handleAddOne = (item) => {
     setStock(stock + 1);
@@ -28,14 +32,51 @@ function Cart() {
     setStock(stock - 1);
     context.AddToCart({ ...item, quantity: -1 });
   };
-  //////////////////////////////
+
+  const handleCheckOut = ({ name, phone, email, address, city }) => {
+    const order = {
+      buyer: {
+        name: name,
+        phone: phone,
+        email: email,
+        address: address,
+        city: city,
+      },
+      items: context.cart.map((item) => ({
+        id: item.id,
+        title: item.title,
+        price: item.price,
+        quantity: item.quantity,
+      })), // guardar id , titulo , precio , cantidad
+      total: context.getTotalPrice(),
+      date: new Date(),
+    };
+
+    // se pasa el obj order a la funcion para crear la orden en firebase
+    createOrder(order).then((id) => {
+      // aca va el sweet alert
+      Swal.fire({
+        title: `🐱‍🏍Thank you ${order.buyer.name} `,
+        text:  `your tracking code is:  ${id} `,
+        icon: 'success',
+        confirmButtonText: 'Bye',
+        timer: 5000 ,
+        timerProgressBar: true
+      })
 
 
+      // una vez generada la orden de compra se borra el carrito
+      context.Clear();
+      // despues de borrar el carrito redirigimos al home
+      setTimeout(() => {
+        Navigate("/");
+      }, 5000);
+    });
+  };
 
   return (
     <div className="container cart-page-container col-12 justify-content-center p-3">
       <div className="cart-page-header "> My cart </div>
-
       <div className="cart-page-body">
         {context.cart.length === 0 ? (
           <div className="col ">
@@ -87,30 +128,27 @@ function Cart() {
                 />
               </div>
             </div>
-          )
-          )
-        )
-        }
+          ))
+        )}
       </div>
-      {context.cart.length !== 0 &&
-      <div className="container text-center mt-3 p-3" style={{color:'white'}}>
-      <h5 >Total: $ { context.getTotalPrice() }</h5>
+      {context.cart.length !== 0 && (
+        <div
+          className="container text-center mt-3 p-3"
+          style={{ color: "white" }}
+        >
+          <h5>Total: $ {context.getTotalPrice()}</h5>
 
-      <div>
-          <ButtonComponent
-            text="Remove all"
-            handlerOnclick={handleClearCart}
-            className="btn-clear"
-          />
-          <ButtonComponent
-            text="Buy cart"
-            handlerOnclick={handleClearCart}
-            className="btn-clear"
-          />
+          <div>
+            <ButtonComponent
+              text="Remove all"
+              handlerOnclick={handleClearCart}
+              className="btn-clear"
+            />
+            {/* modal data */}
+            <Modal onCheckout={handleCheckOut} />
+          </div>
         </div>
-
-      </div>
-      }
+      )}
     </div>
   );
 }

@@ -5,6 +5,8 @@ import { GrFormSubtract } from "react-icons/gr";
 import "./StylesItemDetailContainer.css";
 import { Link } from "react-router-dom";
 import { cartContext } from "../../storage/cartContext";
+import Swal from 'sweetalert2'
+
 
 function ItemCount({ detail }) {
   // estado para guardar la cantidad del producto elegido
@@ -41,7 +43,14 @@ function ItemCount({ detail }) {
     if( countToBuy !==0){ 
       context.AddToCart({ ...detail, quantity: countToBuy  })
     }else{
-      alert("no tenes nada para agregar");
+      Swal.fire({
+        title: 'Nothing to add',
+        text: '🔎Verify your item count',
+        icon: 'warning',
+        confirmButtonText: 'Ok',
+        timer: 2000 ,
+        timerProgressBar: true
+      })
     }
 
     // countToBuy !== 0
@@ -90,12 +99,13 @@ function ItemCount({ detail }) {
           {` ${countToBuy}x ${detail.title} was added to cart `}
           <div>
             <span>
-              Complete your purchase <Link to="/"> here </Link>
+              <Link to={'/Cart'}> {`>>> Click to complete your purchase <<<`} </Link>
             </span>
+
           </div>
           <div>
             <ButtonComponent
-              text={"undo"}
+              text={"Delete this ❌"}
               handlerOnclick={()=> handleRestItemOfCart(detail)}
             />
           </div>

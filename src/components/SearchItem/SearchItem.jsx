@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { getProductByName } from "../../services/firebase";
 import ItemList from "../ItemListContainer/ItemList";
 import { useLocation } from "react-router-dom";
+import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 
 const SearchItem = () => {
   const [search, setSearch] = useState("");
@@ -61,13 +62,20 @@ const SearchItem = () => {
         <div className="text-searched row">
           <p>{`Results for >> ${search}`}</p>
         </div>
+        <div className="d-flex justify-content-center mb-3">
+      <ButtonComponent 
+      
+      handlerOnclick={() => setSearch('')}
+      text={'Return'}
+      />
+      </div>
         <div className="row item-search-container">
         <ItemList
         products={products}
       />
-      <button onClick={() => setSearch('')}>Clear Search</button>
         </div>
       </div>
+
     </>
   ) : (
     <div className="container d-flex  justify-content-center ">

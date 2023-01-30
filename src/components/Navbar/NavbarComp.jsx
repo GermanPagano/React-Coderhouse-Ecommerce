@@ -21,8 +21,10 @@ function NavbarComp() {
       <Container className="nav-container">
         <Navbar.Brand className="brand-container">
           <Link to={"/"}>
-            <img src={brand} alt="brand" />
+            <img src={brand} alt="brand" /> 
+            GameStore
           </Link>
+
         </Navbar.Brand>
 
         <Navbar.Toggle
@@ -55,7 +57,6 @@ function NavbarComp() {
                 XBOX
               </Link>
             </NavDropdown>
-            <Link to="/about">About</Link>
             <Link to={"/cart"} className="nav-ico-actions">
               <CartWidget text={context.cart} />
             </Link>

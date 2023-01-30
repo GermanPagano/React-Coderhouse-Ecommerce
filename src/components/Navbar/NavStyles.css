@@ -16,7 +16,9 @@
 .menu-icon:active {
     transform: translateY(2px);
 }
-
+.brand-container a{
+    color: white;
+}
 .brand-container img {
     max-height: 50px;
 }

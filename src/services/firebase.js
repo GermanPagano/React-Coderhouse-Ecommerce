@@ -1,5 +1,17 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore , collection , getDocs, getDoc, doc ,query , where} from "firebase/firestore"; //  SDK -> soft development kit
+import { getFirestore , collection , getDocs, getDoc, doc ,query , where, addDoc} from "firebase/firestore"; //  SDK -> soft development kit
+import algoliasearch from 'algoliasearch/lite'
+// para actualizar los productos debo descomentar este import y luego la funcion de la linea 97 a 107.
+// import { products } from '../services/productsDB'
+
+
+// inizializo algolia
+const APPLICATION_ID = 'A4REJH6ERF'
+const SEARCH_API_KEY = 'edb7cb65fbc2aaec208b165d0c6ece29'
+const ALGOLIA_INDEX = 'prod_of_ecommerce'
+
+const client = algoliasearch( APPLICATION_ID , SEARCH_API_KEY)
+const index = client.initIndex(ALGOLIA_INDEX)
 
 const firebaseConfig = {
     apiKey: "AIzaSyDBvFqBKHbFIiWbk-aWRUibHwqGz_YaCfM",
@@ -52,18 +64,48 @@ export async function getProductByConsole(ItemConsole){
   return products
   }
   
-// funcion para buscar productos por el input  
+
+// funcion para buscar por palabra en los productos , utilize la extension de Algolia
 export async function getProductByName(ItemName){
-  const productsRef = collection(dataBase, 'products');
-  const q  = query( productsRef , where( "title" , "==" , ItemName ) )
-  const snapshot = await getDocs(q)
-  const products = snapshot.docs.map((elem) =>{
-    let product = elem.data();
-    product.id = elem.id;
-    return product
+  const { hits } = await index.search( ItemName,{
+    hitsPerPage: 3
   })
+  const products = hits.map(({objectID, price, img, ...rest}) => ({
+    id: objectID,
+    price: price,
+    img: img,
+    ...rest
+  }))
   return products
 }
+
+
+
+export async function createOrder(order){
+  const orderRef = collection(dataBase, 'order')
+// creo la orden añadiendo 
+  let resolveCreateOrder = await addDoc( orderRef , order );
+  return resolveCreateOrder.id
+  
+}
+
+
+
+// Para cargar los productos des-comentar esta funcion y regargar pagina
+// los productos los cargo desde el archivo productsDB 'products'
+
+// export async function DataMockToDb(){
+//     Promise.all(
+//       products.map( async (post)=> {
+//         const resp = await (
+//           delete post.id,
+//           addDoc(collection(dataBase, 'products'), post));
+//         return console.log(resp.title);
+//     })
+//     )
+// }
+// DataMockToDb()
+
 
 
 export default dataBase;

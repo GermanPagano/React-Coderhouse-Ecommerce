@@ -7,37 +7,48 @@ import ItemDeatailContainer from "./components/ItemDetailContainer/ItemDeatailCo
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
-import NavbarComp from './components/Navbar/NavbarComp';
+import NavbarComp from "./components/Navbar/NavbarComp";
 import { CartProvider } from "./storage/cartContext";
 import Cart from "./pages/Cart/Cart";
 import { CatchProducts } from "./services/firebase";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  CatchProducts()
-
-  return ( 
- 
-<div className="App">
-    <CartProvider> 
-      <BrowserRouter>
-          <NavbarComp/>
-          <SearchItem ></SearchItem>
-        <Routes>
-          <Route path="/" exact element={<HomePage />} />{/* ruta requerida para entrega 2 */}
-          <Route path="/about" element={<h1>About proximamente en constuccion</h1>} />
-          <Route path="/item/name/:ItemName" element={<ItemListContainer/>}/>
-          <Route path="/category/:ItemConsole" element={<ItemListContainer />}/>{/* ruta requerida para entrega 2 */}
-          <Route path="/item/:itemid" element={<ItemDeatailContainer />} />{/* ruta requerida para entrega 2 */}
-          <Route path="*" element={<Cart/>} />
-          <Route path="*" element={<PageNotFound/>} />
-        </Routes>
-          <Footer/>
-      </BrowserRouter>
-     </CartProvider> 
-</div>
-
+  CatchProducts();
+  return (
+    <div className="App">
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      <CartProvider>
+        <BrowserRouter>
+          <NavbarComp />
+          <SearchItem></SearchItem>
+          <Routes>
+            <Route path="/" exact element={<HomePage />} />
+            <Route
+              path="/category/:ItemConsole"
+              element={<ItemListContainer />}
+            />
+            <Route path="/item/:itemid" element={<ItemDeatailContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
+    </div>
   );
 }
 
 export default App;
-
