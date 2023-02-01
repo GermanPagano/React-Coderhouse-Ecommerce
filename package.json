@@ -2,7 +2,6 @@
   "name": "react-coderhouse",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://GermanPagano.github.io/React-Coderhouse-Ecommerce",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -11,7 +10,6 @@
     "algoliasearch": "^4.14.3",
     "bootstrap": "^5.2.3",
     "firebase": "^9.16.0",
-    "gh-pages": "^4.0.0",
     "mdb-react-ui-kit": "^5.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
@@ -27,8 +25,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
