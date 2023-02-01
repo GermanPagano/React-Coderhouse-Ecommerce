@@ -1,8 +1,7 @@
 
 # GamingStore 🎮🕹 React.js
 Ecommerce Desarrollado para el curso de **REACT** de *CoderHouse*.
-![image](https://user-images.githubusercontent.com/80891761/215928950-d3af7e59-1ff5-45d4-937e-f94a460f220b.png)
-
+![image](https://user-images.githubusercontent.com/80891761/215929054-58480886-d926-431f-bca4-aa697299bd43.png)
 
 @GamingStore es un ecommerce que cumple con los estandares actuales de desarrollo web con React.
 
