@@ -17,6 +17,9 @@ Ecommerce Desarrollado para el curso de **REACT** de *CoderHouse*.
 
 * **Productos**, cada producto ( Item ), contiene una imagen (portada), titulo, categoria, precio ,consola a la que pertenece, descuento ( si lo tuviera ), y 2 botones de accion , el boton **ADD TO CART** , nos envia la informacion del producto clickeado al carrito , verificando previamente si este estaba agregado y en caso de estarlo sumarle 1 a su cantidad. Por otro lado tenemos al boton **VIEW MORE** , este boton te llevara a una seccion con un detalle del producto, donde podras seleccionar la cantidad deseada del producto a comprar. En caso de añadir el prodcuto desde la seccion detalle , ocurre lo mismo que si lo agregamos desde el home.
 
+![image](https://user-images.githubusercontent.com/80891761/215929225-d2169fb6-cbe3-46d1-a345-7134b65ee2fc.png)
+
+
  **# Category** :
 * Este **Boton ubicado en el Navbar** del proyecto nos muestra un desplegable que nos permite filtrar la busqueda de productos por consola, permitiendo visualizar unicamente los productos para la consola que se deseara. AL clickear la consola elegida, se hara una consulta en la base de datos mostrando solamente el o los productos que tengan coincidencia con el filtro. 
 
