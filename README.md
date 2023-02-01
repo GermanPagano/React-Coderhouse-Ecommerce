@@ -7,7 +7,7 @@ Ecommerce Desarrollado para el curso de **REACT** de *CoderHouse*.
 **Esta compuesto por 3 secciones ( Home , Category , Cart ).**
 
 **# Home** : 
-image.png
+
 * **Una barra de busqueda**, en esta barra es posible buscar por palabra el producto, es decir al ingresar una palabra te devolvera el o los productos que tengan coincidencia con tu busqueda. Para realizarla utilice la extension de **#ALGOLIA**.
 
 * **Un Slide de productos**, que desarrolle utilizando **#SLICK**, donde cada producto se muestra como una imagen clickeable que te llevara a una seccion con un detalle del producto, donde podras seleccionar la cantidad deseada del producto a comprar.
