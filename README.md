@@ -28,6 +28,12 @@ Ecommerce Desarrollado para el curso de **REACT** de *CoderHouse*.
 
 * en la parte inferior de la pantalla nos muestra el Precio final a pagar por nuestro pedido , y nos renderiza 2 botones , **REMOVE ALL** , que nos elimina todos los items que tengamos añadidos y **CHECKOUT** , que nos muestra un modal con un formulario proponiendonos dejar nuestros datos personales para poder realizar la orden de compra. Si los datos estan completos entonces nos permitira enviar estos datos a nuestra base de datos donde de manera automatica se creara una nueva Coleccion en **#FIREBASE** ,la coleccion Orders ,donde sera creado el primer documento ,Cada documento ( cada orden efectuada ) tendra su propio ID unico. este id unico e irrepetible le sera devuelto al usuario al finalizar su pedido, a modo de poder realizar el seguimiento de su orden de compra.
 
+![image](https://user-images.githubusercontent.com/80891761/215929416-b272ced3-b91e-4e42-ad09-f73be88967a6.png)
+
+![image](https://user-images.githubusercontent.com/80891761/215929487-42492d3c-a241-4e81-8977-ad6ec31e3413.png)
+
+![image](https://user-images.githubusercontent.com/80891761/215929559-2c0601d6-136e-415e-be9e-5743aba07908.png)
+
 
 ### # Tecnologias & Dependencias
 
