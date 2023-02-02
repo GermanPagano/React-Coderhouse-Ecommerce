@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore , collection , getDocs, getDoc, doc ,query , where, addDoc} from "firebase/firestore"; //  SDK -> soft development kit
+import { getFirestore , collection , getDocs, getDoc, doc ,query , where, addDoc,writeBatch, documentId} from "firebase/firestore"; //  SDK -> soft development kit
 import algoliasearch from 'algoliasearch/lite'
 // para actualizar los productos debo descomentar este import y luego la funcion de la linea 97 a 107.
 // import { products } from '../services/productsDB'
@@ -82,15 +82,47 @@ export async function getProductByName(ItemName){
 
 
 export async function createOrder(order){
-  const orderRef = collection(dataBase, 'order')
-// creo la orden añadiendo 
-  let resolveCreateOrder = await addDoc( orderRef , order );
-  return resolveCreateOrder.id
+  const orderRef = collection( dataBase, 'order')
+  const productsRef = collection(dataBase, 'products')
+
+  //1 se crea un nuevo lote o 'batch' utilizando writeBatch
+  const batch= writeBatch(dataBase)
+  //2 se actualiza cada item segun la compra del usuario
+  //2.a se hace un listado de items a actualizar
+  const arrayId = order.items.map( item => item.id ) 
+  //2.b obtener la data de cada producto a actualizar utilizando una Query
+  const q = query( productsRef , where( documentId(), 'in', arrayId ))
+  const querySnapshot = await getDocs(q)
+  const docsToUpdate= querySnapshot.docs
+  //3 para cada documento en la DB comprobar si hay stock para realizar la compra
+  docsToUpdate.forEach( doc => {
+  //3.a obtener el stock real del producto en la base de datos  
+    let stock = doc.data().stock
+  //3.b encontrar el item que estamos iterando en el carrito 
+  let itemInCart=  order.items.find( item => item.id === doc.id)
+  let countInCart= itemInCart.quantity
+  //3.c calculamos la cantidad de stock restante si se realiza la compra ( tiene que ser 0 o mayor para que sea posible)
+  let newStock = stock - countInCart
+  //4 validar si hay stock para realizar la compra
+  if(newStock <0){
+    throw new Error (alert(`No hay stock suficiente para realizar la orden de compra`))
+  }else{
+    batch.update( doc.ref, { stock: newStock })
+  }
+  })
+
+  //5 para finalizar , se hace un commit del batch y actualizar la base de datos.
+  await batch.commit()
+
+  //6 generamos la orden de compra
+  let newOrder = await addDoc( orderRef , order)
+  return newOrder.id
+
   
 }
 
 
-
+//todo: importante no borrar esta funcion.
 // Para cargar los productos des-comentar esta funcion y regargar pagina
 // los productos los cargo desde el archivo productsDB 'products'
 

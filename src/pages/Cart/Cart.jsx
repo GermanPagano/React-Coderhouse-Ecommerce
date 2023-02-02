@@ -108,6 +108,7 @@ function Cart() {
                 <ButtonComponent
                   handlerOnclick={() => handleAddOne(item)}
                   text={<GrFormAdd size={20} />}
+                  onDisabler={ item.quantity >= item.stock  }
                 />
 
                 <ButtonComponent
